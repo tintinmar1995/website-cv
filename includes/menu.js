@@ -6,7 +6,7 @@ document.write('<li>');
 document.write('<li>');
 document.write('<a>Expérience</a>');
 document.write('<ul>');
-document.write('<li><a href="datastorm.html">Data Storm</a></li>');
+document.write('<li><a href="datastorm.html">DataStorm</a></li>');
 document.write('<li><a href="cozy.html">Cozy Cloud</a></li>');
 document.write('<li>');
 document.write('<a href="ejc.html">ENSAI junior Consultant</a>');
