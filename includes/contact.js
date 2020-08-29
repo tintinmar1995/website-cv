@@ -7,7 +7,7 @@ document.write('</header>');
 document.write('<ul class="contact">');
 document.write('<li>');
 document.write('<span class="mail">Mail</span>');
-document.write('<span><a href="mailto:martin.masson.pro@protonmail.com">martin.masson.pro@protonmail.com</a></span>');
+document.write('<span><a href="mailto:pro@mmasson.fr">pro@mmasson.fr</a> (Chiffrement ProtonMail)</span>');
 document.write('</li>');
 document.write('<li>');
 document.write('<span class="address">GitHub</span>');
