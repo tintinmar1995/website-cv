@@ -1,5 +1,5 @@
 document.write('<div class="container">');
-document.write('<div class="4u" id="contact">');
+document.write('<div class="12u" id="contact">');
 document.write('<section>');
 document.write('<header class="major">');
 document.write('<h2>Me contacter</h2>');
@@ -7,7 +7,7 @@ document.write('</header>');
 document.write('<ul class="contact">');
 document.write('<li>');
 document.write('<span class="mail">Mail</span>');
-document.write('<span>pro[at]mmasson.fr (Compatible chiffrement ProtonMail & PGP)</span>');
+document.write('<span>pro[at]mmasson.fr <em>(Compatible chiffrement ProtonMail & PGP)</em></span>');
 document.write('</li>');
 document.write('<li>');
 document.write('<span class="address">GitHub</span>');
