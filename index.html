@@ -16,7 +16,7 @@
   <!-- For Facebook and LinkedIn -->
   <meta property="og:title" content="Martin MASSON - Data Scientist" />
   <meta property="og:type" content="article" />
-  <meta property="og:image" content="//cv.mmasson.fr/thumbnail.png"/>
+  <meta property="og:image" content="//cv.mmasson.fr/images/thumbnail.png"/>
   <meta property="og:url" content="//cv.mmasson.fr/" />
   <meta property="og:description" content="" />
 
@@ -259,6 +259,25 @@
 
 
   <SCRIPT>
+    const basicColor = "#f5f5f5";
+    const highlighted = "rgba(175,100,100,0.5)";
+    function shiningKeyword(text, color){
+      for (elem of document.getElementsByClassName("kw")){
+        if(elem.innerText==text){
+          elem.style["background"] = color;
+        }
+      }
+    }
+
+
+    for (elem of document.getElementsByClassName("kw")){
+        elem.addEventListener("click", function(event){
+          shiningKeyword(event.target.innerText, highlighted)
+          setTimeout(shiningKeyword, 5000, event.target.innerText, basicColor)
+        }, false);
+    }
+
+
     function shorterLabel(){
       for (elem of document.getElementsByClassName("columnleft")){
         if($(window).width()>880){
