@@ -88,7 +88,7 @@
     text-align:right;
     padding-left: 2%;
     padding-right:5px;
-    flex: 0 0 100px;
+    flex: 0 0 150px;
   }
 
   .columnrightnoborder {
@@ -124,7 +124,7 @@
     <h2 style="margin-top:0px;">Data Scientist</h2>
 
     <p>
-      <b style="margin-right:10px">@</b><a aria-label="Compatible avec le chiffrement ProtonMail" data-balloon-pos="right" style="margin-right:10px">pro[at]mmasson.fr</a>
+      <b style="margin-right:10px">@</b><a aria-label="Compatible chiffrement ProtonMail" data-balloon-pos="up" style="margin-right:10px">pro[at]mmasson.fr</a>
       <b style="margin-right:10px">@</b>martin.masson[at]datastorm.fr
     </p>
     <p>
@@ -159,8 +159,11 @@
   <h2 style="margin-bottom:0px;">Expérience</h2><hr>
   <div class="container">
     <div class="row">
-      <div class="columnleft">
+      <div class="columnleft"
+           onmouseover="document.getElementById('logo-ds').style.display='block';"
+           onmouseout="document.getElementById('logo-ds').style.display='none';">
         <b><p>Depuis</p> <p>Décembre 2019</p></b>
+        <img id="logo-ds" src="images/datastorm.png" width="70px" style="float:right;margin-top:10px;display:none;">
       </div>
       <div class="columnright">
           <p><b>Consultant junior en Data Science, @ DATASTORM,</b></p>
@@ -172,8 +175,11 @@
       </div>
     </div>
     <div class="row">
-      <div class="columnleft">
-          <b><p>Septembre 2019</p> - <p>Avril 2019</p></b>
+      <div class="columnleft"
+           onmouseover="document.getElementById('logo-cozy').style.display='block';"
+           onmouseout="document.getElementById('logo-cozy').style.display='none';">
+          <b><p>Avril 2019</p><p>Septembre 2019</p></b>
+          <img id="logo-cozy" src="images/cozy-cloud.png" width="70px" style="float:right;margin-top:10px;display:none;">
       </div>
       <div class="columnright">
           <p><b>Stagiaire en Data Science, @ COZY CLOUD,</b></p>
@@ -186,8 +192,11 @@
       </div>
     </div>
     <div class="row">
-      <div class="columnleft">
-          <b><p>Février 2019</p> - <p>Février 2017</p></b>
+      <div class="columnleft"
+          onmouseover="document.getElementById('logo-ejc').style.display='block';"
+          onmouseout="document.getElementById('logo-ejc').style.display='none';">
+          <b><p>Février 2019</p><p>Février 2017</p></b>
+          <img id="logo-ejc" src="images/logoEJC.png" width="80px" style="float:right;margin-top:10px;display:none;">
       </div>
       <div class="columnright">
           <p><b>Vice-Président | Chef de Projet | DSI, @ ENSAI JUNIOR CONSULTANT,</b></p>
@@ -199,11 +208,15 @@
       </div>
     </div>
     <div class="row">
-      <div class="columnleft">
-          <b><p>Août 2018</p> - <p>Juin 2018</p></b>
+      <div class="columnleft"
+           onmouseover="document.getElementById('logo-insee').style.display='block';"
+           onmouseout="document.getElementById('logo-insee').style.display='none';">
+          <b><p>Août 2018</p><p>Juin 2018</p></b>
+          <img id="logo-insee" src="images/insee.png" width="50px" style="float:right;margin-top:10px;display:none;">
       </div>
       <div class="columnright">
           <p><b>Stagiaire sur le projet de rénovation de la CSP,@ DIRECTION GÉRÉNALE DE L’INSEE,</b></p>
+          <p>L’Institut national de la statistique et des études économiques collecte, produit, analyse et diffuse des informations sur l’économie et la société françaises.</p>
           <ul>
             <li>Conception d’outils en lien avec la refonte des Catégories Socio-Professionnelles</li>
           </ul>
@@ -230,7 +243,7 @@
     <br/>
     <div class="row">
       <div class="columnleft"><b>Développement</b></div>
-      <div class="columnrightnoborder">Python, R, Java, Go, Basic, LATEX -  Git, Linux (Bash), SSH  -  SQL, CouchDB</div>
+      <div class="columnrightnoborder">Python, R, Java, Go, Basic, LaTex -  Git, Linux (Bash), SSH  -  SQL, CouchDB</div>
     </div>
     <div class="row">
       <div class="columnleft"><b>Visualisation</b></div>
@@ -257,7 +270,7 @@
 
   </div>
 
-  <div style="margin:200px"></div>
+  <div style="margin:100px"></div>
 
   <SCRIPT>
     const basicColor = "#f5f5f5";
