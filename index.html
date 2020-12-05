@@ -79,189 +79,181 @@
   }
 
   .columnleft {
-    float: left;
     text-align:right;
     padding-left: 2%;
     padding-right:5px;
-    width: 15%;
+    flex: 0 0 100px;
   }
 
   .columnrightnoborder {
     padding-left:5px;
-    float: left;
-    width: 80%;
+    flex:0 0 800px;
   }
 
   .columnright {
     border-left: 1px solid;
-    padding-left:5px;
-    float: left;
-    width: 80%;
+    padding-left: 5px;
+    flex:0 0 800px;
   }
 
   .row{
-    margin-bottom : 10px;
-  }
-
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
+    display: flex;
+    margin-bottom: 10px;
   }
 
 </STYLE>
 <BODY style="margin:0px; font-family: Trebuchet MS">
   <div class="topnav">
-    <a href="https://mrtn77m2sn-drive.mycozy.cloud/public?sharecode=PgWDkkEDP2la#/" class="active">Télécharger en format .pdf</a>
+    <a href="https://mrtn77m2sn-drive.mycozy.cloud/public?sharecode=PgWDkkEDP2la#/" class="active">Télécharger (pdf)</a>
     <span style="color:white;">Actualisé en Janvier 2020</span>
   </div>
 
   <!-- CONTENT -->
-  <div style="margin:40px">
+  <div style="margin:4%">
 
     <!-- HEADER -->
     <h1 style="margin-bottom:0px;">Martin MASSON</h1>
     <h2 style="margin-top:0px;">Data Scientist</h2>
 
     <p>
-      <b style="margin-right:10px">@</b><a aria-label="Compatible avec le chiffrement ProtonMail" data-balloon-pos="up">pro[at]mmasson.fr</a>
-      <b style="margin:0 10px 0 20px;">@</b>martin.masson[at]datastorm.fr
+      <b style="margin-right:10px">@</b><a aria-label="Compatible avec le chiffrement ProtonMail" data-balloon-pos="up" style="margin-right:10px">pro[at]mmasson.fr</a>
+      <b style="margin-right:10px">@</b>martin.masson[at]datastorm.fr
     </p>
     <p>
-      <b style="margin-right:10px">GitHub :</b><a href="https://github.com/tintinmar1995">tintinmar1995</a>
-      <b style="margin:0 10px 0 20px;">LinkedIn :</b><a href="https://www.linkedin.com/in/martin-masson-data-scientist/">martin-masson-data-scientist</a>
+      <b style="margin-right:10px"><a href="https://github.com/tintinmar1995">GitHub</a></b>
+      <b style="margin-right:10px"><a href="https://www.linkedin.com/in/martin-masson-data-scientist/">LinkedIn</a></b>
     </p>
     <br/>
 
     <p>
-      Mon parcours, mes capacités en mathématiques, mon appétence pour l'informatique ont fait de moi un statisticien à l'aise avec les problématiques de développement. J'aime faire partie d'une équipe pour y contribuer à l'élaboration d'un projet. L'équipe actuelle ? Data Storm. Le projet ? Apporter une expertise Data.
+      Mon parcours, mes capacités en mathématiques, mon appétence pour l'informatique ont fait de moi un statisticien à l'aise avec les problématiques de développement. J'aime faire partie d'une équipe pour y contribuer à l'élaboration d'un projet. L'équipe actuelle ? DataStorm. Le projet ? Apporter une expertise Data.
     </p>
 
   <h2 style="margin-bottom:0px;">Formation</h2><hr>
-    <div class="row">
-      <div class="columnleft">
-          2019
+  <div style="overflow-x:scoll;overflow-y:hidden;">
+      <div class="row">
+        <div class="columnleft">2019</div>
+        <div class="columnrightnoborder">
+            <b>Statistique et Ingénierie des Données</b>, Ecole Nationale de la Statistique et de l'Analyse de l'Information (<a href="https://ensai.fr/">ENSAI</a>) - Rennes (35).
+        </div>
       </div>
-      <div class="columnrightnoborder">
-          <b>Statistique et Ingénierie des Données</b>, Ecole Nationale de la Statistique et de l'Analyse de l'Information (<a href="https://ensai.fr/">ENSAI</a>) - Rennes (35).
+      <div class="row">
+        <div class="columnleft">2016</div>
+        <div class="columnrightnoborder">
+            <b>Classe Préparatoire aux Grandes Ecoles</b>, Cursus Mathématiques-Physique à Melun (77).
+        </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="columnleft">
-          2016
+      <div class="row">
+        <div class="columnleft">2013</div>
+        <div class="columnrightnoborder">
+            <b>Baccalauréat, filière Scientifique</b>, Collège et Lycée de Nangis (77).
+        </div>
       </div>
-      <div class="columnrightnoborder">
-          <b>Classe Préparatoire aux Grandes Ecoles</b>, Cursus Mathématiques-Physique à Melun (77).
-      </div>
-    </div>
-    <div class="row">
-      <div class="columnleft">
-          2013
-      </div>
-      <div class="columnrightnoborder">
-          <b>Baccalauréat, filière Scientifique</b>, Collège et Lycée de Nangis (77).
-      </div>
-    </div>
+  </div>
 
   <!-- ISSUE WHEN WIDTH < 888-->
   <h2 style="margin-bottom:0px;">Expérience</h2><hr>
-  <div class="row">
-    <div class="columnleft">
-        <b><p>Décembre 2019</p><p>Aujourd'hui</p></b>
+  <div style="overflow-x:scoll;overflow-y:hidden;">
+    <div class="row">
+      <div class="columnleft">
+        <b><p>Depuis</p> <p>Décembre 2019</p></b>
+      </div>
+      <div class="columnright">
+          <p><b>Consultant junior en Data Science, @ DATASTORM,</b></p>
+          <p>Data Storm est l’entreprise de conseil du groupe ENSAE. Data Storm valorise les activités de recherche et propose une expertise dans les domaines de l’économie, de la statistique, de la data science et de l’IA.</p>
+          <ul>
+            <li>Conception et développement de tableaux de bords en R Shiny</li>
+          </ul>
+          <span class="kw">Statistique</span><span class="kw">Machine Learning</span><span class="kw">R</span><span class="kw">R Shiny</span><span class="kw">Python</span>
+      </div>
     </div>
-    <div class="columnright">
-        <p><b>Consultant junior en Data Science, @ DATASTORM,</b></p>
-        <p>Data Storm est l’entreprise de conseil du groupe ENSAE. Data Storm valorise les activités de recherche et propose une expertise dans les domaines de l’économie, de la statistique, de la data science et de l’IA.</p>
-        <ul>
-          <li>Conception et développement de tableaux de bords en R Shiny</li>
-        </ul>
-        <span class="kw">Statistique</span><span class="kw">Machine Learning</span><span class="kw">R</span><span class="kw">R Shiny</span><span class="kw">Python</span>
+    <div class="row">
+      <div class="columnleft">
+          <b><p>Septembre 2019</p> - <p>Avril 2019</p></b>
+      </div>
+      <div class="columnright">
+          <p><b>Stagiaire en Data Science, @ COZY CLOUD,</b></p>
+          <p>Cozy Cloud est une solution cloud pour reprendre le contrôle sur ses données personnelles. Un Cozy estun domicile numérique : un espace de stockage sécurisé avec des outils connectés à celui-ci.</p>
+          <ul>
+            <li>Conception et développement d’un service web implémentant un protocole d’apprentissage supervisédans un contexte de données décentralisées.</li>
+            <li>Analyse critique d’un modèle de classification de libellés bancaires.</li>
+          </ul>
+          <span class="kw">Machine Learning</span><span class="kw">GoLang</span><span class="kw">Python</span><span class="kw">Privacy-By-Design</span><span class="kw">Cryptologie</span><span class="kw">Statistique Exploratoire</span><span class="kw">ReactJS</span>
+      </div>
     </div>
-  </div>
-  <div class="row">
-    <div class="columnleft">
-        <b><p>Septembre 2019</p><p>Avril 2019</p></b>
+    <div class="row">
+      <div class="columnleft">
+          <b><p>Février 2019</p> - <p>Février 2017</p></b>
+      </div>
+      <div class="columnright">
+          <p><b>Vice-Président | Chef de Projet | DSI, @ ENSAI JUNIOR CONSULTANT,</b></p>
+          <p>ENSAI junior Consultant est la Junior-Entreprise (JE) de l’ENSAI, spécialisée dans le domaine des statis-tiques. Une JE est une association à visée pédagogique qui permet aux étudiants de mettre en pratiqueles enseignements dispensés en cours.</p>
+          <ul>
+            <li>Rédaction de propositions commerciales, suivi administratif, gestion de la relation client et manage-ment de consultant.e.s</li>
+          </ul>
+          <span class="kw">Management</span><span class="kw">Statistique</span><span class="kw">Android</span><span class="kw">HTML/CSS/JS/PHP</span>
+      </div>
     </div>
-    <div class="columnright">
-        <p><b>Stagiaire en Data Science, @ COZY CLOUD,</b></p>
-        <p>Cozy Cloud est une solution cloud pour reprendre le contrôle sur ses données personnelles. Un Cozy estun domicile numérique : un espace de stockage sécurisé avec des outils connectés à celui-ci.</p>
-        <ul>
-          <li>Conception et développement d’un service web implémentant un protocole d’apprentissage supervisédans un contexte de données décentralisées.</li>
-          <li>Analyse critique d’un modèle de classification de libellés bancaires.</li>
-        </ul>
-        <span class="kw">Machine Learning</span><span class="kw">GoLang</span><span class="kw">Python</span><span class="kw">Privacy-By-Design</span><span class="kw">Cryptologie</span><span class="kw">Statistique Exploratoire</span><span class="kw">ReactJS</span>
-    </div>
-  </div>
-  <div class="row">
-    <div class="columnleft">
-        <b><p>Février 2019</p><p>Février 2017</p></b>
-    </div>
-    <div class="columnright">
-        <p><b>Vice-Président | Chef de Projet | DSI, @ ENSAI JUNIOR CONSULTANT,</b></p>
-        <p>ENSAI junior Consultant est la Junior-Entreprise (JE) de l’ENSAI, spécialisée dans le domaine des statis-tiques. Une JE est une association à visée pédagogique qui permet aux étudiants de mettre en pratiqueles enseignements dispensés en cours.</p>
-        <ul>
-          <li>Rédaction de propositions commerciales, suivi administratif, gestion de la relation client et manage-ment de consultant.e.s</li>
-        </ul>
-        <span class="kw">Management</span><span class="kw">Statistique</span><span class="kw">Android</span><span class="kw">HTML/CSS/JS/PHP</span>
-    </div>
-  </div>
-  <div class="row">
-    <div class="columnleft">
-        <b><p>Août 2018</p><p>Juin 2018</p></b>
-    </div>
-    <div class="columnright">
-        <p><b>Stagiaire sur le projet de rénovation de la CSP,@ DIRECTION GÉRÉNALE DE L’INSEE,</b></p>
-        <ul>
-          <li>Conception d’outils en lien avec la refonte des Catégories Socio-Professionnelles</li>
-        </ul>
-        <span class="kw">Statistique Exploratoire</span><span class="kw">Modélisation</span><span class="kw">LibreOffice Basic</span><span class="kw">Python</span><span class="kw">LaTex</span><span class="kw">R</span>
+    <div class="row">
+      <div class="columnleft">
+          <b><p>Août 2018</p> - <p>Juin 2018</p></b>
+      </div>
+      <div class="columnright">
+          <p><b>Stagiaire sur le projet de rénovation de la CSP,@ DIRECTION GÉRÉNALE DE L’INSEE,</b></p>
+          <ul>
+            <li>Conception d’outils en lien avec la refonte des Catégories Socio-Professionnelles</li>
+          </ul>
+          <span class="kw">Statistique Exploratoire</span><span class="kw">Modélisation</span><span class="kw">LibreOffice Basic</span><span class="kw">Python</span><span class="kw">LaTex</span><span class="kw">R</span>
+      </div>
     </div>
   </div>
 
   <h2 style="margin-bottom:0px;">Compétences</h2><hr>
-  <div class="row">
-    <div class="columnleft"><b>Langues</b></div>
-    <div class="columnrightnoborder">Français, Anglais (C2 - TOEIC en 2017), Espagnol (A2)</div>
+  <div style="overflow-x:scoll;overflow-y:hidden;">
+    <div class="row">
+      <div class="columnleft"><b>Langues</b></div>
+      <div class="columnrightnoborder">Français, Anglais (C2 - TOEIC en 2017), Espagnol (A2)</div>
+    </div>
+    <br/>
+    <div class="row">
+      <div class="columnleft"><b>Machine Learning</b></div>
+      <div class="columnrightnoborder">Modèles linéaires, Réseaux de neurones, SVM, Arbres de décision, Méthodes d’agrégation.</div>
+    </div>
+    <div class="row">
+      <div class="columnleft"><b>Statistique</b></div>
+      <div class="columnrightnoborder">Statistiques exploratoires, Tests, Séries temporelles et modèle de durées, Gestion des don-nées manquantes et ré-échantillonnage, Méthodes d’anonymisation</div>
+    </div>
+    <br/>
+    <div class="row">
+      <div class="columnleft"><b>Développement</b></div>
+      <div class="columnrightnoborder">Python, R, Java, Go, Basic, LATEX -  Git, Linux (Bash), SSH  -  SQL, CouchDB</div>
+    </div>
+    <div class="row">
+      <div class="columnleft"><b>Visualisation</b></div>
+      <div class="columnrightnoborder">HTML/CSS/JS/PHP, R Shiny, ReactJS, Android</div>
+    </div>
   </div>
-  <br/>
-  <div class="row">
-    <div class="columnleft"><b>Machine Learning</b></div>
-    <div class="columnrightnoborder">Modèles linéaires, Réseaux de neurones, SVM, Arbres de décision, Méthodes d’agrégation.</div>
-  </div>
-  <div class="row">
-    <div class="columnleft"><b>Statistique</b></div>
-    <div class="columnrightnoborder">Statistiques exploratoires, Tests, Séries temporelles et modèle de durées, Gestion des don-nées manquantes et ré-échantillonnage, Méthodes d’anonymisation</div>
-  </div>
-  <br/>
-  <div class="row">
-    <div class="columnleft"><b>Développement</b></div>
-    <div class="columnrightnoborder">Python, R, Java, Go, Basic, LATEX -  Git, Linux (Bash), SSH  -  SQL, CouchDB</div>
-  </div>
-  <div class="row">
-    <div class="columnleft"><b>Visualisation</b></div>
-    <div class="columnrightnoborder">HTML/CSS/JS/PHP, R Shiny, ReactJS, Android</div>
-  </div>
-
 
 
   <h2 style="margin-bottom:0px;">Bénévolat</h2><hr>
-  <div class="row">
-    <div class="columnleft">2020</div>
-    <div class="columnrightnoborder">Développement d'un site web de créations et de gestion de commandes pour la vente de produits agricoles</div>
-  </div>
-  <div class="row">
-    <div class="columnleft">2017</div>
-    <div class="columnrightnoborder">Woofing en tant que fermier bénévole à Andebu (Norvège) : entretien d’enclos, surveillance d’animaux</div>
-  </div>
-  <div class="row">
-    <div class="columnleft">2011</div>
-    <div class="columnrightnoborder">Membre de la communauté Genius France, gérant la partie française de ce site d’explication de textes</div>
+  <div style="overflow-x:scoll;overflow-y:hidden;">
+    <div class="row">
+      <div class="columnleft">2020</div>
+      <div class="columnrightnoborder">Développement d'un site web de créations et de gestion de commandes pour la vente de produits agricoles</div>
+    </div>
+    <div class="row">
+      <div class="columnleft">2017</div>
+      <div class="columnrightnoborder">Woofing en tant que fermier bénévole à Andebu (Norvège) : entretien d’enclos, surveillance d’animaux</div>
+    </div>
+    <div class="row">
+      <div class="columnleft">2011</div>
+      <div class="columnrightnoborder">Membre de la communauté Genius France, gérant la partie française de ce site d’explication de textes</div>
+    </div>
   </div>
 
-
   </div>
 
-  <footer style="background-color: rgba(250, 50, 50, 0.8);">
+  <footer style="background-color: rgba(100, 100, 100, 0.8);">
    <center><p>Ne contient aucun traqueur. Utilisation de balloon.css par kazkiq.</p></center>
   </footer>
 
