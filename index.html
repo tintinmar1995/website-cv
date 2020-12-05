@@ -35,6 +35,12 @@
   	border:1px solid #ccc;
   }
 
+  .container{
+    margin-bottom:40px;
+    overflow-x:scoll;
+    overflow-y:hidden;
+  }
+
   ul {
     list-style: none;
     margin-left: 10px;
@@ -94,7 +100,7 @@
   .columnright {
     border-left: 1px solid;
     padding-left: 5px;
-    min-width:800px;
+    min-width:500px;
     flex:0 0 80%;
   }
 
@@ -127,12 +133,8 @@
     </p>
     <br/>
 
-    <p>
-      Mon parcours, mes capacités en mathématiques, mon appétence pour l'informatique ont fait de moi un statisticien à l'aise avec les problématiques de développement. J'aime faire partie d'une équipe pour y contribuer à l'élaboration d'un projet. L'équipe actuelle ? DataStorm. Le projet ? Apporter une expertise Data.
-    </p>
-
   <h2 style="margin-bottom:0px;">Formation</h2><hr>
-  <div style="overflow-x:scoll;overflow-y:hidden;">
+  <div class="container">
       <div class="row">
         <div class="columnleft">2019</div>
         <div class="columnrightnoborder">
@@ -155,7 +157,7 @@
 
   <!-- ISSUE WHEN WIDTH < 888-->
   <h2 style="margin-bottom:0px;">Expérience</h2><hr>
-  <div style="overflow-x:scoll;overflow-y:hidden;">
+  <div class="container">
     <div class="row">
       <div class="columnleft">
         <b><p>Depuis</p> <p>Décembre 2019</p></b>
@@ -211,7 +213,7 @@
   </div>
 
   <h2 style="margin-bottom:0px;">Compétences</h2><hr>
-  <div style="overflow-x:scoll;overflow-y:hidden;">
+  <div class="container">
     <div class="row">
       <div class="columnleft"><b>Langues</b></div>
       <div class="columnrightnoborder">Français, Anglais (C2 - TOEIC en 2017), Espagnol (A2)</div>
@@ -238,7 +240,7 @@
 
 
   <h2 style="margin-bottom:0px;">Bénévolat</h2><hr>
-  <div style="overflow-x:scoll;overflow-y:hidden;">
+  <div class="container">
     <div class="row">
       <div class="columnleft">2020</div>
       <div class="columnrightnoborder">Développement d'un site web de créations et de gestion de commandes pour la vente de produits agricoles</div>
@@ -255,9 +257,6 @@
 
   </div>
 
-  <footer style="background-color: rgba(100, 100, 100, 0.8);">
-   <center><p>Ne contient aucun traqueur. Utilisation de balloon.css par kazkiq.</p></center>
-  </footer>
 
   <SCRIPT>
     function shorterLabel(){
