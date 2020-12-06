@@ -45,6 +45,18 @@
   	border:1px solid #ccc;
   }
 
+  .more {
+    padding:3px;
+    margin-left:6px;
+    margin-right:6px;
+    font:bold 15px Arial;
+    background:#aaaaf5;
+    color:#555;
+    border-radius:5px;
+    width:100px;
+    border:1px solid #ccc;
+  }
+
   .container{
     margin-bottom:40px;
     overflow-x:scoll;
@@ -204,7 +216,7 @@
       onmouseout="document.getElementById('logo-ds').style.display='none';">
       <div class="columnleft">
         <b><p>Depuis</p> <p>Décembre 2019</p></b>
-        <img id="logo-ds" src="images/datastorm.png" width="70px" style="float:right;margin-top:10px;display:none;">
+        <img id="logo-ds" src="images/datastorm.png" width="75px" style="float:right;margin-top:10px;display:none;">
       </div>
       <div class="columnright">
           <p><b>Consultant junior en Data Science, @ DATASTORM,</b></p>
@@ -215,6 +227,7 @@
           <span class="kw">Statistique</span><span class="kw">Machine Learning</span><span class="kw">R</span><span class="kw">R Shiny</span><span class="kw">Python</span>
       </div>
     </div>
+    <center><a id="btn-ds"  aria-label="Plus sur mon travail à DataStorm" data-balloon-pos="up"><h3>[...]</h3></a></center>
     <div class="row"
           onmouseover="document.getElementById('logo-cozy').style.display='block';"
           onmouseout="document.getElementById('logo-cozy').style.display='none';">
@@ -224,14 +237,15 @@
       </div>
       <div class="columnright">
           <p><b>Stagiaire en Data Science, @ COZY CLOUD,</b></p>
-          <p>Cozy Cloud est une solution cloud pour reprendre le contrôle sur ses données personnelles. Un Cozy estun domicile numérique : un espace de stockage sécurisé avec des outils connectés à celui-ci.</p>
+          <p>Cozy Cloud est une solution cloud pour reprendre le contrôle sur ses données personnelles. Un Cozy est un domicile numérique : un espace de stockage sécurisé avec des outils connectés à celui-ci.</p>
           <ul>
             <li>Conception et développement d’un service web implémentant un protocole d’apprentissage supervisédans un contexte de données décentralisées.</li>
             <li>Analyse critique d’un modèle de classification de libellés bancaires.</li>
           </ul>
-          <span class="kw">Machine Learning</span><span class="kw">GoLang</span><span class="kw">Python</span><span class="kw">Privacy-By-Design</span><span class="kw">Cryptologie</span><span class="kw">Statistique Exploratoire</span><span class="kw">ReactJS</span>
+          <span class="kw">Machine Learning</span><span class="kw">GoLang</span><span class="kw">Python</span><span class="kw">Privacy-By-Design</span><span class="kw">Cryptologie</span><span class="kw">Statistique Exploratoire</span><span class="kw">ReactJS</span></p>
       </div>
     </div>
+    <center><a id="btn-cozy" aria-label="Plus sur mon travail à Cozy" data-balloon-pos="up"><h3>[...]</h3></a></center>
     <div class="row"
         onmouseover="document.getElementById('logo-ejc').style.display='block';"
         onmouseout="document.getElementById('logo-ejc').style.display='none';">
@@ -241,13 +255,14 @@
       </div>
       <div class="columnright">
           <p><b>Vice-Président | Chef de Projet | DSI, @ ENSAI JUNIOR CONSULTANT,</b></p>
-          <p>ENSAI junior Consultant est la Junior-Entreprise (JE) de l’ENSAI, spécialisée dans le domaine des statis-tiques. Une JE est une association à visée pédagogique qui permet aux étudiants de mettre en pratiqueles enseignements dispensés en cours.</p>
+          <p>ENSAI junior Consultant est la Junior-Entreprise (JE) de l’ENSAI, spécialisée dans le domaine des statistiques. Une JE est une association à visée pédagogique qui permet aux étudiants de mettre en pratiqueles enseignements dispensés en cours.</p>
           <ul>
-            <li>Rédaction de propositions commerciales, suivi administratif, gestion de la relation client et manage-ment de consultant.e.s</li>
+            <li>Rédaction de propositions commerciales, suivi administratif, gestion de la relation client et management de consultant.e.s</li>
           </ul>
           <span class="kw">Management</span><span class="kw">Statistique</span><span class="kw">Android</span><span class="kw">HTML/CSS/JS/PHP</span>
       </div>
     </div>
+        <center><a id="btn-ejc" aria-label="Plus sur mon travail à EjC" data-balloon-pos="up"><h3>[...]</h3></a></center>
     <div class="row"
         onmouseover="document.getElementById('logo-insee').style.display='block';"
         onmouseout="document.getElementById('logo-insee').style.display='none';">
@@ -264,6 +279,7 @@
           <span class="kw">Statistique Exploratoire</span><span class="kw">Modélisation</span><span class="kw">LibreOffice Basic</span><span class="kw">Python</span><span class="kw">LaTex</span><span class="kw">R</span>
       </div>
     </div>
+    <center><a id="btn-insee" aria-label="Plus sur mon travail à l'INSEE" data-balloon-pos="up"><h3>[...]</h3></a></center>
   </div>
 
   <h2 style="margin-bottom:0px;">Compétences</h2><hr>
@@ -279,7 +295,7 @@
     </div>
     <div class="row">
       <div class="columnleft"><b>Statistique</b></div>
-      <div class="columnrightnoborder">Statistiques exploratoires, Tests, Séries temporelles et modèle de durées, Gestion des don-nées manquantes et ré-échantillonnage, Méthodes d’anonymisation</div>
+      <div class="columnrightnoborder">Statistiques exploratoires, Tests, Séries temporelles et modèle de durées, Gestion des données manquantes et ré-échantillonnage, Méthodes d’anonymisation</div>
     </div>
     <br/>
     <div class="row">
@@ -353,6 +369,13 @@
     }
     $(window).on("resize", shorterLabel);
     shorterLabel();
+
+    for(id of ["btn-ds", "btn-cozy", "btn-ejc", "btn-insee"]){
+      document.getElementById(id).addEventListener("click", function(event){
+        alert("Non disponible pour le moment")
+      })
+    }
+
   </SCRIPT>
 </BODY>
 </html>
