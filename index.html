@@ -91,6 +91,10 @@
     flex: 0 0 150px;
   }
 
+  @media (max-width:500px) {
+    .columnleft { flex: 0 0 75px; }
+  }
+
   .columnrightnoborder {
     padding-left:5px;
     min-width:500px;
@@ -158,10 +162,10 @@
   <!-- ISSUE WHEN WIDTH < 888-->
   <h2 style="margin-bottom:0px;">Expérience</h2><hr>
   <div class="container">
-    <div class="row">
-      <div class="columnleft"
-           onmouseover="document.getElementById('logo-ds').style.display='block';"
-           onmouseout="document.getElementById('logo-ds').style.display='none';">
+    <div class="row"
+      onmouseover="document.getElementById('logo-ds').style.display='block';"
+      onmouseout="document.getElementById('logo-ds').style.display='none';">
+      <div class="columnleft">
         <b><p>Depuis</p> <p>Décembre 2019</p></b>
         <img id="logo-ds" src="images/datastorm.png" width="70px" style="float:right;margin-top:10px;display:none;">
       </div>
@@ -174,10 +178,10 @@
           <span class="kw">Statistique</span><span class="kw">Machine Learning</span><span class="kw">R</span><span class="kw">R Shiny</span><span class="kw">Python</span>
       </div>
     </div>
-    <div class="row">
-      <div class="columnleft"
-           onmouseover="document.getElementById('logo-cozy').style.display='block';"
-           onmouseout="document.getElementById('logo-cozy').style.display='none';">
+    <div class="row"
+          onmouseover="document.getElementById('logo-cozy').style.display='block';"
+          onmouseout="document.getElementById('logo-cozy').style.display='none';">
+      <div class="columnleft">
           <b><p>Avril 2019</p><p>Septembre 2019</p></b>
           <img id="logo-cozy" src="images/cozy-cloud.png" width="70px" style="float:right;margin-top:10px;display:none;">
       </div>
@@ -191,10 +195,10 @@
           <span class="kw">Machine Learning</span><span class="kw">GoLang</span><span class="kw">Python</span><span class="kw">Privacy-By-Design</span><span class="kw">Cryptologie</span><span class="kw">Statistique Exploratoire</span><span class="kw">ReactJS</span>
       </div>
     </div>
-    <div class="row">
-      <div class="columnleft"
-          onmouseover="document.getElementById('logo-ejc').style.display='block';"
-          onmouseout="document.getElementById('logo-ejc').style.display='none';">
+    <div class="row"
+        onmouseover="document.getElementById('logo-ejc').style.display='block';"
+        onmouseout="document.getElementById('logo-ejc').style.display='none';">
+      <div class="columnleft">
           <b><p>Février 2019</p><p>Février 2017</p></b>
           <img id="logo-ejc" src="images/logoEJC.png" width="80px" style="float:right;margin-top:10px;display:none;">
       </div>
@@ -207,10 +211,10 @@
           <span class="kw">Management</span><span class="kw">Statistique</span><span class="kw">Android</span><span class="kw">HTML/CSS/JS/PHP</span>
       </div>
     </div>
-    <div class="row">
-      <div class="columnleft"
-           onmouseover="document.getElementById('logo-insee').style.display='block';"
-           onmouseout="document.getElementById('logo-insee').style.display='none';">
+    <div class="row"
+        onmouseover="document.getElementById('logo-insee').style.display='block';"
+        onmouseout="document.getElementById('logo-insee').style.display='none';">
+      <div class="columnleft">
           <b><p>Août 2018</p><p>Juin 2018</p></b>
           <img id="logo-insee" src="images/insee.png" width="50px" style="float:right;margin-top:10px;display:none;">
       </div>
