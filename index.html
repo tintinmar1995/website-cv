@@ -23,6 +23,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/balloon.min.css">
+  <script src="https://kit.fontawesome.com/ae25e386da.js" crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </HEAD>
 <BODY>
@@ -80,7 +81,7 @@
       <div class="columnright">
           <p><b>Consultant junior en Data Science, @ DATASTORM,</b></p>
           <p>Data Storm est l’entreprise de conseil du groupe ENSAE. Data Storm valorise les activités de recherche et propose une expertise dans les domaines de l’économie, de la statistique, de la data science et de l’IA.</p>
-          <ul>
+          <ul class="xp-skills">
             <li>Conception et développement de tableaux de bords en R Shiny</li>
           </ul>
           <span class="kw">Statistique</span><span class="kw">Machine Learning</span><span class="kw">R</span><span class="kw">R Shiny</span><span class="kw">Python</span>
@@ -97,7 +98,7 @@
       <div class="columnright">
           <p><b>Stagiaire en Data Science, @ COZY CLOUD,</b></p>
           <p>Cozy Cloud est une solution cloud pour reprendre le contrôle sur ses données personnelles. Un Cozy est un domicile numérique : un espace de stockage sécurisé avec des outils connectés à celui-ci.</p>
-          <ul>
+          <ul class="xp-skills">
             <li>Conception et développement d’un service web implémentant un protocole d’apprentissage supervisédans un contexte de données décentralisées.</li>
             <li>Analyse critique d’un modèle de classification de libellés bancaires.</li>
           </ul>
@@ -115,7 +116,7 @@
       <div class="columnright">
           <p><b>Vice-Président | Chef de Projet | DSI, @ ENSAI JUNIOR CONSULTANT,</b></p>
           <p>ENSAI junior Consultant est la Junior-Entreprise (JE) de l’ENSAI, spécialisée dans le domaine des statistiques. Une JE est une association à visée pédagogique qui permet aux étudiants de mettre en pratiqueles enseignements dispensés en cours.</p>
-          <ul>
+          <ul class="xp-skills">
             <li>Rédaction de propositions commerciales, suivi administratif, gestion de la relation client et management de consultant.e.s</li>
           </ul>
           <span class="kw">Management</span><span class="kw">Statistique</span><span class="kw">Android</span><span class="kw">HTML/CSS/JS/PHP</span>
@@ -132,7 +133,7 @@
       <div class="columnright">
           <p><b>Stagiaire sur le projet de rénovation de la CSP,@ DIRECTION GÉRÉNALE DE L’INSEE,</b></p>
           <p>L’Institut national de la statistique et des études économiques collecte, produit, analyse et diffuse des informations sur l’économie et la société françaises.</p>
-          <ul>
+          <ul class="xp-skills">
             <li>Conception d’outils en lien avec la refonte des Catégories Socio-Professionnelles</li>
           </ul>
           <span class="kw">Statistique Exploratoire</span><span class="kw">Modélisation</span><span class="kw">LibreOffice Basic</span><span class="kw">Python</span><span class="kw">LaTex</span><span class="kw">R</span>
@@ -187,6 +188,27 @@
 
   <div style="margin:100px"></div>
 
+
+  <div class="fab-container">
+      <div class="fab fab-icon-holder">
+        <a class="fas fa-sliders-h" style="color:white;font-size:22pt;padding:15px"></a>
+      </div>
+      <ul class="fab-options">
+          <li><span class="fab-label">
+            <input id="ipt-tech" type='checkbox' checked />
+            <label for="ipt-tech">Pastilles technologies</label>
+          </span></li>
+          <!--<li><span class="fab-label">
+            <input id="ipt-desc" type='checkbox'/>
+            <label for="ipt-desc">Descriptions longues</label>
+          </span></li>
+          <li><span class="fab-label">
+            <input id="ipt-article" type='checkbox'/>
+            <label for="ipt-article">Afficher les articles</label>
+          </span></li>-->
+      </ul>
+  </div>
+
   <SCRIPT>
     const basicColor = "#f5f5f5";
     const highlighted = "rgba(175,100,100,0.5)";
@@ -232,6 +254,12 @@
       document.getElementById(id).addEventListener("click", function(event){
         alert("Non disponible pour le moment")
       })
+    }
+
+    document.getElementById("ipt-tech").onchange = function(event){
+      for(item of document.getElementsByClassName("kw")){
+        item.style.display = event.target.checked ? "" : "none";
+      }
     }
 
   </SCRIPT>
