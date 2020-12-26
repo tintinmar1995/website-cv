@@ -167,6 +167,39 @@
     </div>
   </div>
 
+  <div id="section-article" style="display:none;">
+  <h2 style="margin-bottom:0px;">Articles</h2><hr>
+  <div class="container">
+    <div class="staticrow">
+      <div class="columnleft">2020</div>
+      <div class="columnrightnoborder">
+        <b>Déployer une procédure d'anonymisation</b>
+        <p>Dans ce Livre Blanc, nous [DataStorm] établissons les bases permettant de déployer une procédure générique et rigoureuse d’anonymisation. <a href="https://www.datastorm.fr/livre-blanc-datastorm-deployer-une-procedure-danonymisation/">Lire l'article</a></p>
+      </div>
+    </div>
+    <div class="staticrow">
+      <div class="columnleft">2019</div>
+      <div class="columnrightnoborder">
+        <b>Entrainer une IA sans posséder la donnée est possible</b>
+        <p>Présentation d'un processus d'entraînement d'un modèle de Machine Learning sur des données distribuées dans des clouds personnels. <a href="https://blog.cozy.io/fr/entrainer-une-ia-sans-posseder-la-donnee-est-possible/">Lire l'article</a></p>
+      </div>
+    </div>
+    <div class="staticrow">
+      <div class="columnleft">2018</div>
+      <div class="columnrightnoborder">
+        <b>Coopération EjC & Breizh Data Club</b>
+        <p>Première coopération entre ENSAI junior Consultant, la Junior-Entreprise de l'ENSAI et le Breizh Data Club, l'association des amoureux de la data. <a href="https://www.blog.ejc.fr/art18_010.php">Lire l'article</a></p>
+      </div>
+    </div>
+    <div class="staticrow">
+      <div class="columnleft">2017</div>
+      <div class="columnrightnoborder">
+        <b>EjC au salon entreprendre dans l'Ouest</b>
+        <p>Article écrit suite à la présence d'ENSAI junior Consultant sur le salon rennais Entreprendre dans l'Ouest. <a href="https://www.blog.ejc.fr/art17_017.php">Lire l'article</a></p>
+      </div>
+    </div>
+  </div>
+</div>
 
   <h2 style="margin-bottom:0px;">Bénévolat</h2><hr>
   <div class="container">
@@ -201,11 +234,11 @@
           <!--<li><span class="fab-label">
             <input id="ipt-desc" type='checkbox'/>
             <label for="ipt-desc">Descriptions longues</label>
-          </span></li>
+          </span></li>-->
           <li><span class="fab-label">
             <input id="ipt-article" type='checkbox'/>
             <label for="ipt-article">Afficher les articles</label>
-          </span></li>-->
+          </span></li>
       </ul>
   </div>
 
@@ -261,6 +294,11 @@
         item.style.display = event.target.checked ? "" : "none";
       }
     }
+
+    document.getElementById("ipt-article").onchange = function(event){
+      document.getElementById("section-article").style.display = event.target.checked ? "" : "none";
+    }
+    document.getElementById("section-article").style.display = document.getElementById("ipt-article").checked ? "" : "none";
 
   </SCRIPT>
 </BODY>
