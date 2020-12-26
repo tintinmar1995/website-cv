@@ -84,7 +84,6 @@ p {
 }
 
 .container{
-  overflow-x:scoll;
   overflow-y:hidden;
   margin-bottom:40px;
 }
@@ -95,8 +94,6 @@ p {
 }
 
 .row{
-  overflow-x:scoll;
-  overflow-y:hidden;
   display: flex;
   margin-bottom: 10px;
 }
