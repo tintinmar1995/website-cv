@@ -39,12 +39,17 @@
     <h1 style="margin-bottom:0px;">Martin MASSON</h1>
     <h2 style="margin-top:0px;">Data Scientist</h2>
 
-    <p><b style="margin-right:10px">@</b><a aria-label="Compatible chiffrement ProtonMail" data-balloon-pos="up" style="margin-right:10px">pro[at]mmasson.fr</a></p>
-    <p><b style="margin-right:10px">@</b>martin.masson[at]datastorm.fr</p>
     <p>
+      <a id="display-email" class="fa fa-envelope"></a>
       <a href="https://www.linkedin.com/in/martin-masson-data-scientist/" class="fa fa-linkedin"></a>
       <a href="https://github.com/tintinmar1995" class="fa fa-github"></a>
     </p>
+    <br/>
+    
+    <div id="email-adress" style="display:none;">
+      <p><b style="margin-right:10px">@</b><a aria-label="Compatible chiffrement ProtonMail" data-balloon-pos="up" style="margin-right:10px">pro[at]mmasson.fr</a></p>
+      <p><b style="margin-right:10px">@</b>martin.masson[at]datastorm.fr</p>
+    </div>
     <br/>
 
   <h2 style="margin-bottom:0px;">Formation</h2><hr>
@@ -166,7 +171,7 @@
       <div class="columnrightnoborder">Python, R, Java, Go, Basic, LaTex -  Git, Linux (Bash), SSH  -  SQL, CouchDB</div>
     </div>
     <div class="staticrow">
-      <div class="columnleft"><b>Visualisation</b></div>
+      <div class="columnleft"><b>Développement Web</b></div>
       <div class="columnrightnoborder">HTML/CSS/JS/PHP, R Shiny, ReactJS, Android</div>
     </div>
   </div>
@@ -231,10 +236,10 @@
         <a class="fas fa-sliders-h" style="color:white;font-size:22pt;padding:15px"></a>
       </div>
       <ul class="fab-options">
-          <li><span class="fab-label">
+          <!--<li><span class="fab-label">
             <input id="ipt-tech" type='checkbox' checked />
             <label for="ipt-tech">Pastilles technologies</label>
-          </span></li>
+          </span></li>-->
           <li><span class="fab-label">
             <input id="ipt-desc" type='checkbox'/>
             <label for="ipt-desc">Descriptions longues</label>
@@ -274,6 +279,8 @@
           elem.innerHTML = elem.innerHTML.replaceAll("Déc.", "Décembre")
 
           elem.innerHTML = elem.innerHTML.replaceAll("Dev.", "Développement")
+          elem.innerHTML = elem.innerHTML.replaceAll("ML", "Machine Learning")
+          elem.innerHTML = elem.innerHTML.replaceAll("Dev. Web", "Développement Web")
         }else{
           elem.innerHTML = elem.innerHTML.replaceAll("Septembre", "Sept.")
           elem.innerHTML = elem.innerHTML.replaceAll("Décembre", "Déc.")
@@ -281,6 +288,7 @@
 
           elem.innerHTML = elem.innerHTML.replaceAll("Développement", "Dev.")
           elem.innerHTML = elem.innerHTML.replaceAll("Machine Learning", "ML")
+          elem.innerHTML = elem.innerHTML.replaceAll("Développement Web", "Dev. Web")
         }
       }
     }
@@ -293,11 +301,11 @@
       })
     }
 
-    document.getElementById("ipt-tech").onchange = function(event){
-      for(item of document.getElementsByClassName("kw")){
-        item.style.display = event.target.checked ? "" : "none";
-      }
-    }
+    //document.getElementById("ipt-tech").onchange = function(event){
+    //  for(item of document.getElementsByClassName("kw")){
+    //    item.style.display = event.target.checked ? "" : "none";
+    //  }
+    //}
 
     function changeDescSize(){
       for(item of document.getElementsByClassName("short-desc")){
@@ -316,6 +324,11 @@
     document.getElementById("ipt-article").onchange = displayArticleSection
     changeDescSize()
     displayArticleSection()
+
+    document.getElementById("display-email").onclick = function(){
+      const a = document.getElementById("email-adress").style.display
+      document.getElementById("email-adress").style.display = a=="none" ? "block" : "none"
+    }
 
   </SCRIPT>
 </BODY>
