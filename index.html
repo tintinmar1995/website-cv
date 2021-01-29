@@ -27,6 +27,9 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </HEAD>
 <BODY>
+
+  <div class="cv">
+
   <div class="topnav">
     <a href="https://mrtn77m2sn-drive.mycozy.cloud/public?sharecode=PgWDkkEDP2la#/" class="active">Version PDF</a>
     <span style="color:white;">Actualisé en Janvier 2020</span>
@@ -167,18 +170,29 @@
     </div>
     <br/>
     <div class="staticrow">
-      <div class="columnleft"><b>Développement</b></div>
-      <div class="columnrightnoborder">Python, R, Java, Go, Basic, LaTex -  Git, Linux (Bash), SSH  -  SQL, CouchDB</div>
+      <div class="columnleft"><b>SGBD/DMS</b></div>
+      <div class="columnrightnoborder">SQL, CouchDB, Neo4j</div>
     </div>
     <div class="staticrow">
-      <div class="columnleft"><b>Développement Web</b></div>
-      <div class="columnrightnoborder">HTML/CSS/JS/PHP, R Shiny, ReactJS, Android</div>
+      <div class="columnleft"><b>Développement</b></div>
+      <div class="columnrightnoborder">Python, R, Bash // Java, C++, Go // Basic, LaTex // Git, Linux</div>
+    </div>
+    <div class="staticrow">
+      <div class="columnleft"><b>Webdev</b></div>
+      <div class="columnrightnoborder">HTML/CSS/JS, PHP, R Shiny, ReactJS, Android</div>
     </div>
   </div>
 
   <div id="section-article">
   <h2 style="margin-bottom:0px;">Articles</h2><hr>
   <div class="container">
+    <div class="staticrow">
+      <div class="columnleft">2020</div>
+      <div class="columnrightnoborder">
+        <b>Replay webinar : Comment concilier Performance business et Règlementation grâce à l’Anonymisation des données ?</b>
+        <p>Pourquoi anonymiser ? Choix de la méthode ? Comment mettre en oeuvre la k-anonymisation ? Comment outiller un département/une activité pour mener des études avec la confidentialité différentielle ? <a href="https://www.datastorm.fr/replay-comment-concilier-performance-business-et-reglementation-grace-a-lanonymisation-des-donnees/">Voir le replay</a></p>
+      </div>
+    </div>
     <div class="staticrow">
       <div class="columnleft">2020</div>
       <div class="columnrightnoborder">
@@ -249,6 +263,7 @@
             <label for="ipt-article">Afficher la section article</label>
           </span></li>
       </ul>
+    </div>
   </div>
 
   <div id="myModal" class="modal">
@@ -257,28 +272,140 @@
         <span class="close">&times;</span>
         <h2 id="modal-title">NA</h2>
       </div>
-      <div class="modal-body" id="modal-ds"></div>
+      <div class="modal-body" id="modal-ds">A venir</div>
       <div class="modal-body" id="modal-cozy">
-        <p>L'offre Cozy se base sur le constat simple : dans le schéma qu'est devenu internet, l'utilisateur ne contrôle plus ses données personnelles. Quand nous naviguons sur la toile, nos données sont utilisées automatiquement pour proposer un contenu personnalisé, qu'il s'agisse du service du site ou de publicités intégées. Pour effectuer ces personnalisations, les entreprises collectent ou achètent des données sur l'utilisateur, données stockées et centralisées sur les serveurs d'hébergements de ces dernières.</p><br/>
 
-        <p>Cozy Cloud propose une solution de cloud personnel, pour concevoir un internet où chacun est maître de sa donnée personnelle. La donnée est stockée dans un domicile numérique de données, appelée Cozy, sur lequel viennent se greffer des applications utilisant de manière responsable et transparente le contenu du domicile numérique.</p><br/>
+        <p>L'offre Cozy se base sur le constat simple : dans le schéma qu'est devenu internet, l'utilisateur ne contrôle plus ses données personnelles. Quand nous naviguons sur la toile, nos données sont collectées et utilisées automatiquement pour proposer un contenu personnalisé, qu'il s'agisse du service du contenu premier du site ou de publicités. Pour effectuer ces personnalisations, les entreprises collectent ou achètent des données sur l'utilisateur, données stockées et centralisées sur les serveurs de ces dernières.</p><br/>
 
-        <p>En pratique, à cette heure-ci (Décembre 2019), l'offre Cozy se résume en plusieurs concepts : un socle sécurisé open-source permettant d'empiler des domiciles numériques et gérant les accès à de la donnée, la <b>stack cozy</b>. Un domicile numérique stockant des données et des fichiers, le <b>Cozy</b>. Des applications permettant d'afficher ses données sous différentes formes (système de fichiers avec <b>Cozy Drive</b>, relevés de compte avec <b>Cozy Banks</b>, albums photos avec <b>Cozy Photo</b>, carnet d'adresses avec <b>Cozy Contact</b>). Des connecteurs, capables d'aller récupérer des informations, des documents, depuis des sites internet externes (Orange, MAIF, Crédit Agricole, Leclerc, Ecole Directe, SNCF et bien d'autres)
-        </p><br/>
+        <p>Cozy Cloud propose une solution de cloud personnel, pour concevoir un internet où chacun reste maître de sa donnée personnelle. La donnée est stockée dans un domicile numérique de données, appelée Cozy, sur lequel viennent se greffer des applications utilisant de manière responsable et transparente le contenu très hétérogène du domicile numérique.</p><br/>
 
-        <p>A noter que la stack Cozy est open-source donc téléchargeable gratuitement pour des utilisateurs qui auraient à souhait d'auto-héberger leur Cozy sur un serveur en leur possession, ou loué.</p><br/>
+        <p>En pratique, à cette heure-ci (Décembre 2019), l'offre applicative Cozy se résume en plusieurs concepts : </p>
+        <ul>
+          <li>Un socle sécurisé open-source permettant d'héberger des domiciles numériques, la <b>stack cozy</b>. Elle est téléchargeable gratuitement pour des utilisateurs qui auraient à souhait d'auto-héberger leur Cozy sur un serveur en leur possession.</li>
+          <li>Un domicile numérique stockant des données et des fichiers de manière protégée, le <b>Cozy</b>.</li>
+          <li>Des applications permettant d'afficher ses données sous différentes formes (système de fichiers avec <b>Cozy Drive</b>, relevés de compte avec <b>Cozy Banks</b>, albums photos avec <b>Cozy Photo</b>, carnet d'adresses avec <b>Cozy Contact</b>).</li>
+          <li>Des connecteurs, capables d'aller récupérer des informations, des documents, depuis des sites internet externes (Orange, MAIF, Crédit Agricole, Leclerc, Ecole Directe, SNCF et bien d'autres).</li>
+        </ul>
+
+        <center><img src="https://cozy.io/en/images/nirvana_cozy.svg" width="150px"></center>
+
+        <h3>Ajouter de l'interaction entre les domiciles numériques de chacun</h3>
+
+        <p>Mais reprendre le contrôle sur ces données personnelles ne signifie pas les garder pour soi. Cozy Cloud a implémenté tout un protocole de partage sécurisé et permet des sorties de données contrôlées par l'utilisateur.</p>
+
+        <p>Un des challenges de ce paradigme est d'imaginer l'introduction de l'intelligence artificielle. Comment permettre à des utilisateurs de partager leurs données avec des personnes de confiance pour entraîner ensembe un modèle ? L'intérêt est double car il pourrait permettre aux Data Scientist d'imaginer des modèles sur des données encore plus sensibles (détails du salaire, santé, ...) et de permettre de profondes avancées dans certains domaines où l'accès à la donnée est difficile.</p>
 
         <h3>Du Machine Learning respectant la confidentialité par conception</h3>
 
-        <p>Pour Cozy Cloud, j'ai travaillé sur une architecture permettant d'accéder à de la données confidentielles partagées par des utilisateurs. Je suis revenu à la fin de mon stage sur mon projet dans <a href="https://blog.cozy.io/fr/entrainer-une-ia-sans-posseder-la-donnee-est-possible/">cet article</a>.</p><br/>
+        <p>Pour Cozy Cloud, j'ai travaillé sur une architecture et un protocole Peer-to-Peer permettant d'accéder à de la données confidentielles partagées par des utilisateurs. Ce protocole a été imaginé au cours d'une thèse CIFRE dont j'ai pris le relais le temps d'un stage. Je suis revenu à la fin de mon stage sur le projet dans <a href="https://blog.cozy.io/fr/entrainer-une-ia-sans-posseder-la-donnee-est-possible/">cet article</a>.</p><br/>
 
-        <p>Ce stage m’a amené à découvrir de nouveaux langages de programmation. J’ai eu la possibilité d’expérimenter Go et ReactJS, langages que je n’avais jamais manipulés aupart avant. J’ai été aidé durant la période de prise en main de ces langages par certaines de mes expériences passées : j’ai trouvé en Go des ressemblances avec C++ et en ReactJS des ressemblances avec la programmation Android.</p><br/>
+        <p>Ce stage m’a amené à découvrir de nouveaux langages de programmation. J’ai eu la possibilité d’expérimenter Go et ReactJS, langage et framework que je n’avais jamais manipulés aupart avant. J’ai été aidé dans la prise en main de ces langages par certaines de mes expériences passées : j’ai trouvé en Go des ressemblances avec C++ et en ReactJS des ressemblances avec la programmation Android.</p><br/>
 
-        <p>J'ai appréhendé les problématiques d'apprentissage automatique à un bas niveau. Cette approche était très formatrice et m'a permis de cerner encore mieux les enjeux de confidentialité et de performance des algorithmes d'intelligence artificielle.</p><br/>
+        <p>Enfin de réfléchir à une manière de décentraliser les principaux algorithmes de Machine Learning, j'ai appréhendé les problématiques d'apprentissage automatique à un bas niveau, en m'inspirant des implémentations en Map Reduce. Cette approche était très formatrice et m'a permis de cerner encore mieux les enjeux de confidentialité et de performance des algorithmes d'intelligence artificielle.</p><br/>
 
       </div>
-      <div class="modal-body" id="modal-ejc"></div>
-      <div class="modal-body" id="modal-insee"></div>
+      <div class="modal-body" id="modal-ejc">
+        <h3>Présentation de la Junior-Entreprise (JE)</h3>
+
+        <p>
+          Ensai junior Consultant (EjC) est la Junior-Entreprise de l’ENSAI, spécialisée dans le domaine des statistiques, de l'économétrie et de l'informatique. Les Junior-Entreprises sont des organisations d'étudiants, de Grandes Ecoles ou d'Universités, désireux de se professionnaliser et de travailler pour des entreprises en parallèle de leurs études. Ils interviennent directement sur les projets de professionnels, comme de réels consultants junior travaillant pour un cabinet de conseil.
+        </p><br/><p>
+          L'association était administrée, à l'époque, au quotidien par une équipe de 19 élèves veillant sur son bon fonctionnement. Les administrateurs sont répartis en plusieurs fonctions/pôles : le secrétaire général, la trésorerie, le pôle contrôle-interne, le pôle developpement commercial, le pôle communication, le pôle informatique. Tous ces pôles sont supervisés par une présidence ayant déjà une année d'expérience dans la JE.
+        </p><br/><p>
+          Un mandat en Junior-Entreprise doit s'adapter aux contraintes de l'école (période d'examen, vacances, etc). Il est rythmé par les prestations et certaines phases stratégiques qui rendent l'association pérène : recrutement et formation, préparation d'un audit mené par la Confédération Nationale des Junior-Entreprises (CNJE), échanges avec les anciens administrateurs.
+        </p><br/><p>
+          Ce temps consacré volontairement et bénévolement pour ENSAI junior Consultant m’a apporté, outre le bonheur et la fierté d’appartenir à l’équipe, un nombre important de compétences qui me sont utiles dans ma vie professionnelle. La Junior-Entreprise m’aura permis d’accroître mes compétences statistiques, informatiques et entreprenariales. Ce parcours m'a permis de mettre un premier pied dans le monde professionnel.
+        </p>
+
+        <h3 id="vp">Vice-Président (1 an)</h3>
+          La présence du mot « entrepreneur » dans la marque déposée Junior-Entreprise n’est
+          pas là par hasard. Etre dans une Junior-Entreprise, c’est prendre conscience des
+          problématiques d’une entreprise. Avoir en considération tous les devoirs et les enjeux
+          d’Ensai junior Consultant. Savoir que pour faire progresser la structure, il faut dans un
+          premier temps conserver et transmettre les acquis de l’organisation. Cette mission est
+          largement assurée par le processus RFP (Recrutement, formation, passation). De ces acquis,
+          il faut savoir faire le constat de ce qui fonctionne et de ce qui pourrait être amélioré. Ce
+          constat se fait généralement en fin de mandat pendant la période d’élection de la nouvelle
+          présidence, et lors des discussions avec les anciens administrateurs.
+        </p><br/><p>
+          Avec mes deux camarades à la présidence 2018 de l'association, nous étions - par exemple - tous les trois conscients d’une amélioration
+          possible de la communication interne et externe à l'ENSAI et nous avons essayé de définir
+          une stratégie pour répondre aux problématiques posées. Cette stratégie, nous l’avons décrite
+          suivant plusieurs axes : le fonctionnnement interne de la Junior-Entreprise, la relation avec les Ensaiens, le rayonnement auprès des entreprises, la place d’EjC dans le mouvement.
+        </p><br/><p>
+          Nous avons constitué et contruit une équipe dont nous avons été les responsables durant un an. Ensemble, nous avons supervisé des projets, résolu des problèmes, essayé de faire progresser la structure.
+          En fin d'année 2018, nous avons conseillé la nouvelle présidence dans la constitution de leur équipe avant de peu à peu transmettre les reines et préparer la dernière tâche du mandat : l'audit organisationnel et financier.
+        </p><br/><p>
+          Nous avons eu la joie quelques temps après notre fin de mandat de voir ENSAI junior Consultant intégrer pour la seconde fois de son histoire la liste des trentes meilleures Junior-Entreprises de France. Cette récompense fut le fruit de bien des efforts
+          menés bénévolement par tous les membres de l'association durant plusieurs mandats, en parallèle du travail effectué pour nos études. Aujourd'hui encore, nous gardons contact avec l'association afin de conseiller et d'aider les générations qui ont pris notre suite.
+        </p>
+
+        <h3 id="cdp">Chef de projets (2 ans)</h3>
+
+        <p>Durant mes 24 mois passés comme administrateur chez EjC, j'ai pu observer, apprendre puis m'essayer au rôle de chef de projet.
+          Pour le compte d'ENSAI junior Consultant, j'ai réalisé ou aidé à la réalisation d'une dizaine de propositions commerciales.
+          J'ai assisté à deux reprises un chef de projet, puis endossé sur trois études ce rôle.
+        </p><br/><p>
+          Ces trois études avaient des problématiques différentes, des méthodologies différentes
+          mais gardent en commun d’impliquer le travail de deux consultants. Ces trois
+          méthodologies m’ont permis de suivre, d'un autre angle de vue, des cas concrets d’analyses descriptives, de régressions logistiques ou d’élaboration d’une application R Shiny.
+          Durant la	conception des propositions commerciales, j’ai pu bénéficier de l’aide d’étudiants, mais également de
+          permanents à l’ENSAI. J’ai eu à considérer certaines techniques statistiques avant de les avoir
+          vues en cours. Etant un étudiant se nourrissant de projets concrets, cette approche a été, pour moi,
+          la meilleure introduction possible aux cours de l'ENSAI.
+        </p><br/><p>
+          J’ai ainsi été le relais entre 3 clients et 6 consultants. Ces études m’ont permis de
+          gérer la pression d’un calendrier sans la pleine maîtrise des différents acteurs des trois
+          projets. Cela m’a apporté professionnellement dans la diplomatie requise à faire valoir ses
+          droits, ses volontés, en restant courtois. Sur ces études, il a fallu résister à des clients
+          offensifs, essayant de prolonger l’étude malgré le contrat signé. Il a fallu être téméraire pour
+          obtenir un retour de tous les papiers administratifs et patients, pour résister à la pression
+          qu’implique d’être l’intermédiaire entre un client et un consultant. J’ai
+          fait de mon mieux pour gérer les retards pris, les compromis entre demandes du client et
+          possibilités des consultants, les moments « de rush ».
+        </p><br/><p>
+          Sur mes propres études, comme sur celles des autres, j’ai pris part, à plusieurs reprises,
+          à des « réunions de crise » pour essayer de trouver rapidement la meilleure solution à un
+          problème imminent.
+        </p><br/><p>
+          A noter qu'être chef de projet à ENSAI junior Consultant, c'est aussi préparer la majorité des documents
+          administratifs relatifs à l'étude. Cet aspect de la mission m'a permis de découvrir des contours juridiques dont
+          j'ignorais l'existance.
+        </p>
+
+        <h3 id="dsi">DSI (1 an) et Développeur Android (1 an)</h3>
+        <p>
+          Pendant un an au sein du pôle informatique, j’ai pu travailler en duo à la mise à jour du site
+          internet, à la gestion des outils informatiques utilisés par les différents pôles. J’ai aidé à garantir une bonne communication entre les différents pôles, mais aussi entre la Junior-Entreprise et le monde extérieur.
+          Parti de connaissances quasi inexistantes en HTML, CSS et PHP, j'ai co-conçu et co-implémenté un blog.
+        </p><br/><p>
+          A la fin du mandat, nous avons dispensé sept formations et nous avons réfléchis aux projets que nous pourrions transmettre pour le futur de patrimoine informatique de la JE.
+        </p><br/><p>
+          Par la suite, en parallèle de mon rôle de Vice-Président, j'ai conçu la première version de l'application Android de la Junior-Entreprise.
+          Cette réalisation m'a fait progresser en Java, m'a fait découvrir Git et m'a plus globalement enseigné à diagnostiquer et résoudre des bugs
+          en utilisant les forums comme stackoverflow, ou des documents techniques officiels.
+        </p>
+      </div>
+      <div class="modal-body" id="modal-insee">
+        <h3> Le projet auquel j'ai pris part</h3>
+            <p>Les professions et catégories socioprofessionnelles forment un langage commun permettant de représenter le monde social. Ce langage, présent dans les programmes de lycée, a la qualité d'être clair et compréhensif par tous, de l'expert au non-initié. Cette aspect permet sa présence dans des questionnaires auto-administrés. Il est également précis au point d'être utilisé comme variable de construction d'indicateurs économiques.
+             </p><br/>
+             <center><img src="images/pcs.jpg" width="500px"></center>
+             <p>
+              Cette nomenclature de la population a été créée en 1982. Elle remplaça, à l'époque, une première nomenclature, moins précise, datant de 1954 : les CSP (catégories socioprofessionnelles). Ces deux outils ont permis de classer la population suivant certaines caractéristiques d'intérêt (profession, caractéristiques de l'organisation, étude, ...) pour produire des analyses statistiques, économiques, sociologiques.
+            </p><br/><p>
+              Comme le monde change, au gré des décisions économiques des acteurs qui le constituent, des emplois naissent et disparaissent. Afin de maintenir un outil d'une précision remarquable, la PCS doit être reprise et mise à jour. A l'époque la dernière rénovation datait de 2003, elle fut motivée par un rapport de l’Inspection Générale de l’Insee rédigé par Guy Neyret et Hedda Faucheux. Comme en 1999 et ce rapport, la rénovation de 2020 fait suite à un état des lieux précis des apports et des limites de la PCS. Etat des lieux prenant en compte le progrès remarquable de l'informatique et les évolutions d'une économie qui a vu se développer, entre autres, les métiers du numérique, et une nouvelle forme de travail indépendant.
+            </p>
+
+        <h3> Ma mission dans ce projet </h3>
+
+            <em>Comment fournir des outils informatiques et statistiques à même d'équiper au mieux la rénovation et la maintenance de la nomenclature des PCS, de la création à la documentation de la nomenclature ?</em>
+          </p><br/><p>
+            L'outil central à l'architecture d'applications que j'ai développée est le classeur de synthèse de la PCS. Ce classeur LibreOffice est doté de macros permettant de concevoir la nouvelle nomenclature, de la reprendre et de diffuser son contenu sous différentes formes. Il se compose d'une série d'onglets plus ou moins automatisés, facilitant la création manuelle d'un index d'un très fort volume, et son intégration dans des outils annexes.
+          </p><br/><p>
+            Une des attentes pour mon stage, en marge de la production du classeur de synthèse de la PCS, fut de produire un programme permettant de générer la documentation relative à la nouvelle nomenclature. J'ai fait le choix de Python et LaTeX pour leur facilité de reprise, pour la rigueur de LaTeX dans la mise en page et l'efficacité de la lecture du classeur de synthèse induite par Python.
+          </p>
+      </div>
     </div>
   </div>
 
@@ -311,7 +438,7 @@
 
           elem.innerHTML = elem.innerHTML.replaceAll("Dev.", "Développement")
           elem.innerHTML = elem.innerHTML.replaceAll("ML", "Machine Learning")
-          elem.innerHTML = elem.innerHTML.replaceAll("Dev. Web", "Développement Web")
+          /*elem.innerHTML = elem.innerHTML.replaceAll("Dev. Web", "Développement Web")*/
         }else{
           elem.innerHTML = elem.innerHTML.replaceAll("Septembre", "Sept.")
           elem.innerHTML = elem.innerHTML.replaceAll("Décembre", "Déc.")
@@ -319,7 +446,7 @@
 
           elem.innerHTML = elem.innerHTML.replaceAll("Développement", "Dev.")
           elem.innerHTML = elem.innerHTML.replaceAll("Machine Learning", "ML")
-          elem.innerHTML = elem.innerHTML.replaceAll("Développement Web", "Dev. Web")
+          /*elem.innerHTML = elem.innerHTML.replaceAll("Développement Web", "Dev. Web")*/
         }
       }
     }
@@ -338,6 +465,7 @@
       for (elem of document.getElementsByClassName("modal-body")){
         elem.style.display = 'none';
       }
+      document.getElementsByClassName("cv")[0].style = "";
     }
 
     // When the user clicks anywhere outside of the modal, close it
@@ -356,9 +484,11 @@
       document.getElementById(id).addEventListener("click", function(event){
         document.getElementById("modal-title").innerText = titles[event.target.parentNode.id]
         modal.style.display = "block";
+        modal.scrollTop = 0;
         document.getElementById(event.target.parentNode.id.replace("btn", "modal")).style.display = "block";
         document.documentElement.style.overflow = 'hidden';
         document.body.scroll = "no";
+        document.getElementsByClassName("cv")[0].style = "-webkit-filter: blur(3px) grayscale(90%)";
       })
     }
 
