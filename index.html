@@ -50,7 +50,7 @@
     <br/>
 
     <div id="email-adress" style="display:none;">
-      <p><b style="margin-right:10px">@</b><a aria-label="Compatible chiffrement ProtonMail" data-balloon-pos="up" style="margin-right:10px">pro[at]mmasson.fr</a></p>
+      <p><b style="margin-right:10px">@</b><a aria-label="Compatible chiffrement ProtonMail" data-balloon-pos="up" style="text-decoration:none;" style="margin-right:10px">pro[at]mmasson.fr</a></p>
       <p><b style="margin-right:10px">@</b>martin.masson[at]datastorm.fr</p>
     </div>
     <br/>
@@ -108,7 +108,7 @@
           <ul class="xp-skills">
             <li>Conception et développement de tableaux de bords en R Shiny</li>
           </ul>
-          <center><a id="btn-ds"  aria-label="Plus sur mon travail à DataStorm" data-balloon-pos="up"><h3>[...]</h3></a></center>
+          <center><a href="#ds"  aria-label="Plus sur mon travail à DataStorm" data-balloon-pos="up" style="text-decoration:none;"><h3>[...]</h3></a></center>
           <span class="kw">Statistique</span><span class="kw">Machine Learning</span><span class="kw">R</span><span class="kw">R Shiny</span><span class="kw">Python</span>
       </div>
     </div>
@@ -127,7 +127,7 @@
             <li>Conception et développement d’un service web implémentant un protocole d’apprentissage supervisédans un contexte de données décentralisées.</li>
             <li>Analyse critique d’un modèle de classification de libellés bancaires.</li>
           </ul>
-          <center><a id="btn-cozy" aria-label="Plus sur mon travail à Cozy" data-balloon-pos="up"><h3>[...]</h3></a></center>
+          <center><a href="#cozy" aria-label="Plus sur mon travail à Cozy" data-balloon-pos="up" style="text-decoration:none;"><h3>[...]</h3></a></center>
           <span class="kw">Machine Learning</span><span class="kw">GoLang</span><span class="kw">Python</span><span class="kw">Privacy-By-Design</span><span class="kw">Cryptologie</span><span class="kw">Statistique Exploratoire</span><span class="kw">ReactJS</span></p>
       </div>
     </div>
@@ -145,7 +145,7 @@
           <ul class="xp-skills">
             <li>Rédaction de propositions commerciales, suivi administratif, gestion de la relation client et management de consultant.e.s</li>
           </ul>
-          <center><a id="btn-ejc" aria-label="Plus sur mon travail à EjC" data-balloon-pos="up"><h3>[...]</h3></a></center>
+          <center><a href="#ejc" aria-label="Plus sur mon travail à EjC" data-balloon-pos="up" style="text-decoration:none;"><h3>[...]</h3></a></center>
           <span class="kw">Management</span><span class="kw">Statistique</span><span class="kw">Android</span><span class="kw">HTML/CSS/JS/PHP</span>
       </div>
     </div>
@@ -163,7 +163,7 @@
           <ul class="xp-skills">
             <li>Conception d’outils en lien avec la refonte des Catégories Socio-Professionnelles</li>
           </ul>
-          <center><a id="btn-insee" aria-label="Plus sur mon travail à l'INSEE" data-balloon-pos="up"><h3>[...]</h3></a></center>
+          <center><a href="#insee" aria-label="Plus sur mon travail à l'INSEE" data-balloon-pos="up" style="text-decoration:none;"><h3>[...]</h3></a></center>
           <span class="kw">Statistique Exploratoire</span><span class="kw">Modélisation</span><span class="kw">LibreOffice Basic</span><span class="kw">Python</span><span class="kw">LaTex</span><span class="kw">R</span>
       </div>
     </div>
@@ -474,13 +474,7 @@
 
     // When the user clicks on <span> (x), close the modal
     span.onclick = function() {
-      modal.style.display = "none";
-      document.documentElement.style.overflow = 'scroll';
-      document.body.scroll = "yes";
-      for (elem of document.getElementsByClassName("modal-body")){
-        elem.style.display = 'none';
-      }
-      document.getElementsByClassName("cv")[0].style = "";
+      history.back();
     }
 
     // When the user clicks anywhere outside of the modal, close it
@@ -489,23 +483,32 @@
     }
 
     titles = {
-      'btn-ds' : 'Mes missions à DataStorm',
-      'btn-cozy' : 'Ma mission à Cozy Cloud',
-      'btn-ejc' : 'Mes missions à EjC',
-      'btn-insee' : 'Ma mission à l\'INSEE'
+      'ds' : 'Mes missions à DataStorm',
+      'cozy' : 'Ma mission à Cozy Cloud',
+      'ejc' : 'Mes missions à EjC',
+      'insee' : 'Ma mission à l\'INSEE'
     }
 
-    for(id of ["btn-ds", "btn-cozy", "btn-ejc", "btn-insee"]){
-      document.getElementById(id).addEventListener("click", function(event){
-        document.getElementById("modal-title").innerText = titles[event.target.parentNode.id]
+    window.addEventListener("hashchange", function(){
+      name = window.location.hash.replace("#", "")
+      if(Object.keys(titles).indexOf(name) >= 0){
+        document.getElementById("modal-title").innerText = titles[name]
         modal.style.display = "block";
         modal.scrollTop = 0;
-        document.getElementById(event.target.parentNode.id.replace("btn", "modal")).style.display = "block";
+        document.getElementById("modal-"+name).style.display = "block";
         document.documentElement.style.overflow = 'hidden';
         document.body.scroll = "no";
         document.getElementsByClassName("cv")[0].style = "-webkit-filter: blur(3px) grayscale(90%)";
-      })
-    }
+      } else {
+        modal.style.display = "none";
+        document.documentElement.style.overflow = 'scroll';
+        document.body.scroll = "yes";
+        for (elem of document.getElementsByClassName("modal-body")){
+          elem.style.display = 'none';
+        }
+        document.getElementsByClassName("cv")[0].style = "";
+      }
+    });
 
     //document.getElementById("ipt-tech").onchange = function(event){
     //  for(item of document.getElementsByClassName("kw")){
