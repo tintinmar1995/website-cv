@@ -227,5 +227,11 @@ p {
 
 .modal-btn {
   text-decoration:none;
-  color:black;
+  font-size:20pt;
+  color: #555555;
+  margin-bottom: 10px;
+}
+
+.kw-row {
+  margin-top: 15px;
 }
