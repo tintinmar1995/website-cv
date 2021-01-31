@@ -152,7 +152,7 @@
             <li>Participation à la constitution et au management d'une équipe de 19 personnes</li>
             <li>Co-élaboration d'une stratégie sur 3 ans et co-préparation d'un audit complet</li>
             <li>Rédaction de propositions commerciales, suivi administratif, gestion de la relation client et management de consultant.e.s</li>
-            <li>Maintenance d'un site et création d'un blog et implémentation de la première version de l'application Android d'EjC</li>
+            <li>Maintenance d'un site, création d'un blog et implémentation de la première version de l'application Android d'EjC</li>
           </ul>
           <center><a class="modal-btn" href="#ejc" aria-label="Plus sur mon travail à EjC" data-balloon-pos="up" ><i class="fas fa-receipt"></i></a></center>
           <div class="kw-row">
@@ -339,13 +339,13 @@
         <h3>Présentation de la Junior-Entreprise (JE)</h3>
 
         <p>
-          Ensai junior Consultant (EjC) est la Junior-Entreprise de l’ENSAI, spécialisée dans le domaine des statistiques, de l'économétrie et de l'informatique. Les Junior-Entreprises sont des organisations d'étudiants, de Grandes Ecoles ou d'Universités, désireux de se professionnaliser et de travailler pour des entreprises en parallèle de leurs études. Ils interviennent directement sur les projets de professionnels, comme de réels consultants junior travaillant pour un cabinet de conseil.
+          Ensai junior Consultant (EjC) est la Junior-Entreprise de l’ENSAI, spécialisée dans le domaine des statistiques, de l'économétrie et de l'informatique. Les Junior-Entreprises sont des organisations d'étudiants, de Grandes Ecoles ou d'Universités, désireux de se professionnaliser et de travailler pour des entreprises en parallèle de leur scolarité. Ils interviennent directement sur les projets de professionnels, comme de réels consultants junior travaillant pour un cabinet de conseil.
         </p><br/><p>
-          L'association était administrée, à l'époque, au quotidien, par une équipe de 19 élèves veillant sur son bon fonctionnement. Les administrateurs sont répartis en plusieurs fonctions/pôles : le secrétaire général, la trésorerie, le pôle contrôle-interne, le pôle developpement commercial, le pôle communication, le pôle informatique. Tous ces pôles sont supervisés par une présidence ayant déjà une année d'expérience dans la JE.
+          L'association était administrée, à l'époque, au quotidien, par une équipe de 19 élèves veillant sur son bon fonctionnement. Les administrateurs sont répartis en plusieurs fonctions/pôles : le secrétaire général, la trésorerie, le pôle contrôle-interne, le pôle developpement commercial, le pôle communication, le pôle informatique. Tous ces pôles sont supervisés par une présidence qui a déjà une année d'expérience dans la JE.
         </p><br/><p>
           Un mandat en Junior-Entreprise doit s'adapter aux contraintes de l'école (période d'examen, vacances, etc). Il est rythmé par les prestations pour les clients, les projets internes et certaines phases stratégiques qui rendent l'association pérène : recrutement et formation, préparation d'un audit mené par la Confédération Nationale des Junior-Entreprises (CNJE), échanges avec les anciens administrateurs.
         </p><br/><p>
-          Ce temps consacré bénévolement pour ENSAI junior Consultant m’a apporté, outre le bonheur et la fierté d’appartenir à l’équipe, beaucoup de compétences qui me sont utiles dans ma vie professionnelle. La Junior-Entreprise m’aura permis d’accroître mes compétences statistiques, informatiques et entreprenariales. Ce parcours m'a permis de mettre un premier pied dans le monde professionnel.
+          Ce temps consacré bénévolement pour ENSAI junior Consultant m’a apporté, outre le bonheur et la fierté d’appartenir à l’équipe, beaucoup de compétences qui me sont utiles dans ma vie professionnelle. La Junior-Entreprise m’aura permis d’accroître mes compétences statistiques, informatiques et entreprenariales. Ce parcours m'aura fait mettre un premier pied dans le monde professionnel.
         </p>
 
         <h3 id="vp">Vice-Président (1 an)</h3>
@@ -440,6 +440,7 @@
   </div>
 
   <SCRIPT>
+    /* KEYWORD HIGHLIGHTING */
     const basicColor = "#f5f5f5";
     const highlighted = "rgba(175,100,100,0.5)";
     function shiningKeyword(text, color){
@@ -449,8 +450,6 @@
         }
       }
     }
-
-
     for (elem of document.getElementsByClassName("kw")){
         elem.addEventListener("click", function(event){
           shiningKeyword(event.target.innerText, highlighted)
@@ -459,6 +458,7 @@
     }
 
 
+    /* RESPONSIVE ACTIONS */
     function shorterLabel(){
       for (elem of document.getElementsByClassName("columnleft")){
         if($(window).width()>880){
@@ -483,19 +483,16 @@
     $(window).on("resize", shorterLabel);
     shorterLabel();
 
+
+    /* MODAL */
+
     // Get the modal
     var modal = document.getElementById("myModal");
     var span = document.getElementsByClassName("close")[0];
-
     // When the user clicks on <span> (x), close the modal
-    span.onclick = function() {
-      history.back();
-    }
-
     // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-      if (event.target == modal) {span.onclick()}
-    }
+    span.onclick = function(){history.back();}
+    window.onclick = function(event){if (event.target == modal) {span.onclick()}}
 
     titles = {
       'ds' : 'Mes missions à DataStorm',
@@ -507,12 +504,12 @@
     window.addEventListener("hashchange", function(){
       name = window.location.hash.replace("#", "")
       if(Object.keys(titles).indexOf(name) >= 0){
-        document.getElementById("modal-title").innerText = titles[name]
         modal.style.display = "block";
         modal.scrollTop = 0;
-        document.getElementById("modal-"+name).style.display = "block";
         document.documentElement.style.overflow = 'hidden';
         document.body.scroll = "no";
+        document.getElementById("modal-title").innerText = titles[name]
+        document.getElementById("modal-"+name).style.display = "block";
         document.getElementsByClassName("cv")[0].style = "-webkit-filter: blur(3px) grayscale(90%)";
       } else {
         modal.style.display = "none";
@@ -524,6 +521,8 @@
         document.getElementsByClassName("cv")[0].style = "";
       }
     });
+
+    /* SETTINGS */ 
 
     //document.getElementById("ipt-tech").onchange = function(event){
     //  for(item of document.getElementsByClassName("kw")){
