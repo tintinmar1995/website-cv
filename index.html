@@ -32,11 +32,27 @@
 
   <div class="topnav">
     <a href="https://mrtn77m2sn-drive.mycozy.cloud/public?sharecode=PgWDkkEDP2la#/" class="active">Version PDF</a>
+    <a id="show-settings"><i class="fas fa-cogs"></i></a>
     <span style="color:white;">Actualisé en Janvier 2020</span>
   </div>
 
   <!-- CONTENT -->
   <div style="margin:4%">
+
+    <ul class="settings" id="settings">
+      <li>
+        <span class="fab-label">
+          <input id="ipt-desc" type='checkbox'/>
+          <label for="ipt-desc">Descriptions longues</label>
+        </span>
+      </li>
+      <li>
+        <span class="fab-label">
+          <input id="ipt-article" type='checkbox' checked/>
+          <label for="ipt-article">Afficher la section article</label>
+        </span>
+      </li>
+    </ul>
 
     <!-- HEADER -->
     <h1 style="margin-bottom:0px;">Martin MASSON</h1>
@@ -54,21 +70,6 @@
       <p><b style="margin-right:10px">@</b>martin.masson[at]datastorm.fr</p>
     </div>
     <br/>
-
-    <ul style="display: inline-block; padding-left:0px;">
-      <li style="display: inline-block; margin-bottom:10px;">
-        <span class="fab-label">
-          <input id="ipt-desc" type='checkbox'/>
-          <label for="ipt-desc">Descriptions longues</label>
-        </span>
-      </li>
-      <li style="display: inline-block; margin-bottom:10px;">
-        <span class="fab-label">
-          <input id="ipt-article" type='checkbox' checked/>
-          <label for="ipt-article">Afficher la section article</label>
-        </span>
-      </li>
-    </ul>
 
   <h2 style="margin-bottom:0px;">Formation</h2><hr>
   <div class="container">
@@ -523,6 +524,11 @@
     });
 
     /* SETTINGS */
+
+    document.getElementById("show-settings").onclick = function(){
+      sss = document.getElementById("settings").style;
+      sss.display = sss.display == "none" ? "inline-block" : "none";
+    }
 
     //document.getElementById("ipt-tech").onchange = function(event){
     //  for(item of document.getElementsByClassName("kw")){

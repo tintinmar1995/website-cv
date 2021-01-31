@@ -235,3 +235,13 @@ p {
 .kw-row {
   margin-top: 15px;
 }
+
+.settings{
+  display: none; /*inline-block*/
+  padding-left:0px;
+}
+
+.settings > li {
+  display: inline-block;
+  margin-bottom:10px;
+}
