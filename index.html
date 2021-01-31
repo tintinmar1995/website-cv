@@ -33,7 +33,7 @@
   <div class="topnav">
     <a href="https://mrtn77m2sn-drive.mycozy.cloud/public?sharecode=PgWDkkEDP2la#/" class="active">Version PDF</a>
     <a id="show-settings"><i class="fas fa-cogs"></i></a>
-    <span style="color:white;">Actualisé en Janvier 2020</span>
+    <span id="update" style="color:white;">Actualisé en Janvier 2020</span>
   </div>
 
   <!-- CONTENT -->
@@ -143,7 +143,7 @@
         onmouseout="document.getElementById('logo-ejc').style.display='none';">
       <div class="columnleft">
           <b><p>Février 2019</p><p>Février 2017</p></b>
-          <img id="logo-ejc" src="images/logoEJC.png" width="80px" style="float:right;margin-top:10px;display:none;">
+          <img id="logo-ejc" src="images/logoEJC.png" width="90px" style="float:right;margin-top:10px;display:none;">
       </div>
       <div class="columnright">
           <p><b>Vice-Président | Chef de Projet | DSI, @ ENSAI JUNIOR CONSULTANT,</b></p>
@@ -461,8 +461,13 @@
 
     /* RESPONSIVE ACTIONS */
     function shorterLabel(){
-      for (elem of document.getElementsByClassName("columnleft")){
+      elems = [].slice.call(document.getElementsByClassName("columnleft"));
+      elems.push(document.getElementById("update"))
+      for (elem of elems){
         if($(window).width()>880){
+          elem.innerHTML = elem.innerHTML.replaceAll("MaJ", "Actualisé")
+
+          elem.innerHTML = elem.innerHTML.replaceAll("Janv.", "Janvier")
           elem.innerHTML = elem.innerHTML.replaceAll("Sept.", "Septembre")
           elem.innerHTML = elem.innerHTML.replaceAll("Fév.", "Février")
           elem.innerHTML = elem.innerHTML.replaceAll("Déc.", "Décembre")
@@ -471,6 +476,9 @@
           elem.innerHTML = elem.innerHTML.replaceAll("ML", "Machine Learning")
           /*elem.innerHTML = elem.innerHTML.replaceAll("Dev. Web", "Développement Web")*/
         }else{
+          elem.innerHTML = elem.innerHTML.replaceAll("Actualisé", "MaJ")
+
+          elem.innerHTML = elem.innerHTML.replaceAll("Janvier", "Janv.")
           elem.innerHTML = elem.innerHTML.replaceAll("Septembre", "Sept.")
           elem.innerHTML = elem.innerHTML.replaceAll("Décembre", "Déc.")
           elem.innerHTML = elem.innerHTML.replaceAll("Février", "Fév.")
