@@ -183,15 +183,6 @@ transform: scale(1, 1) translateY(0);
   color: white;
 }
 
-/*
-.fab-container{display:block;position:fixed;bottom:15px;right:15px;z-index:999;cursor:pointer}}
-.fab-icon-holder{padding:10px;box-shadow:0 6px 20px rgba(0,0,0,.2)}
-.fab-icon-holder:hover{opacity:.8}
-.fab{width:60px;height:60px;background:#d23f31;border-radius:50px;}
-.fab-options{list-style-type:none;margin:0;position:absolute;bottom:70px;right:0;opacity:0;transition:all .3s ease;transform:scale(0);transform-origin:85% bottom}
-.fab-options:hover,.fab:hover+.fab-options{opacity:1;transform:scale(1)}
-.fab-options li{display:flex;justify-content:flex-end;padding:5px}
-*/
 .fab-label{padding:4px 4px;align-self:center;user-select:none;white-space:nowrap;border-radius:3px;font-size:16px;background:#666;color:#fff;box-shadow:0 6px 20px rgba(0,0,0,.2);margin-right:10px}
 
 /* The Modal (background) */
@@ -206,6 +197,10 @@ transform: scale(1, 1) translateY(0);
  overflow: auto; /* Enable scroll if needed */
  background-color: rgb(0,0,0); /* Fallback color */
  background-color: rgba(0,0,0,0.3); /* Black w/ opacity */
+}
+
+.modal-title {
+  display : none;
 }
 
 /* Modal Content/Box */
