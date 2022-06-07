@@ -173,6 +173,11 @@ transform: scale(1, 1) translateY(0);
   color: white;
 }
 
+.fa-gitlab {
+  background: #292961;
+  color: #fca326;
+}
+
 .fa-envelope {
   background: #7487bc;
   color: white;
