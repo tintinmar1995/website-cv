@@ -1,0 +1,32 @@
+<div>
+  <p>L'offre Cozy se base sur le constat simple : dans le schéma qu'est devenu internet, l'utilisateur ne contrôle plus ses données personnelles. Quand nous naviguons sur la toile, nos données sont collectées et utilisées automatiquement pour proposer un contenu personnalisé, qu'il s'agisse du service premier du site ou de publicités. Pour effectuer ces personnalisations, les entreprises collectent ou achètent des données sur l'utilisateur, données stockées et centralisées sur des serveurs de ces dernières.</p><br/>
+
+  <p>Cozy Cloud propose une solution de cloud personnel, pour concevoir un internet où chacun reste maître de sa donnée personnelle. La donnée est stockée dans un domicile numérique de données, appelée Cozy, sur lequel viennent se greffer des applications utilisant de manière responsable et transparente le contenu très hétérogène du domicile numérique.</p><br/>
+
+  <p>En pratique, à cette heure-ci (Décembre 2019), l'offre applicative Cozy se résume en plusieurs concepts : </p>
+  <ul>
+    <li>Un socle sécurisé open-source permettant d'héberger des domiciles numériques, la <b>stack cozy</b>. Elle est téléchargeable gratuitement pour des utilisateurs qui auraient à souhait d'auto-héberger leur Cozy sur un serveur en leur possession.</li>
+    <li>Un domicile numérique stockant des données et des fichiers de manière protégée, le <b>Cozy</b>.</li>
+    <li>Des applications permettant d'afficher ses données sous différentes formes (système de fichiers avec <b>Cozy Drive</b>, relevés de compte avec <b>Cozy Banks</b>, albums photos avec <b>Cozy Photo</b>, carnet d'adresses avec <b>Cozy Contact</b>).</li>
+    <li>Des connecteurs, capables d'aller récupérer des informations, des documents, depuis des sites internet externes (Orange, MAIF, Crédit Agricole, Leclerc, Ecole Directe, SNCF et bien d'autres).</li>
+  </ul>
+
+  <center><img src="images/cozy-cloud.png" width="100px"></center>
+
+  <h3>Ajouter de l'interaction entre les domiciles numériques de chacun</h3>
+
+  <p>Mais reprendre le contrôle sur ces données personnelles ne signifie pas les garder pour soi. Cozy Cloud a implémenté tout un protocole de partage sécurisé et permet des sorties de données contrôlées par l'utilisateur.
+  </p><br/><p>
+  Un des challenges de ce paradigme est d'imaginer l'introduction de l'intelligence artificielle. Comment permettre à des utilisateurs de partager leurs données avec des personnes/entités de confiance pour entraîner ensemble un modèle ? L'intérêt est double car ce protocole pourrait permettre aux Data Scientists d'imaginer des modèles sur des données encore plus sensibles (détails du salaire, santé, ...) et de permettre de profondes avancées dans certains domaines où l'accès à la donnée est difficile.</p>
+
+  <center><img src="https://cozy.io/en/images/nirvana_cozy.svg" width="150px"></center>
+
+  <h3>Du Machine Learning respectant la confidentialité par conception</h3>
+
+  <p>Pour Cozy Cloud, j'ai travaillé sur une architecture et un protocole Peer-to-Peer permettant d'accéder à de la donnée confidentielle partagée par des utilisateurs. Ce protocole a été imaginé au cours d'une thèse CIFRE dont j'ai pris le relais le temps d'un stage. Je suis revenu à la fin de mon stage sur le projet dans <a href="https://blog.cozy.io/fr/entrainer-une-ia-sans-posseder-la-donnee-est-possible/">cet article</a>.</p><br/>
+
+  <p>Ce stage m’a amené à découvrir de nouveaux langages de programmation. J’ai eu la possibilité d’expérimenter Go et ReactJS, langage et framework que je n’avais jamais manipulés aupart avant. J’ai été aidé dans la prise en main de ces langages par certaines de mes expériences passées : j’ai trouvé en Go des ressemblances avec C++ et en ReactJS des ressemblances avec la programmation Android.</p><br/>
+
+  <p>Enfin de réfléchir à une manière de décentraliser les principaux algorithmes de Machine Learning, j'ai appréhendé les problématiques d'apprentissage automatique à un bas niveau, en m'inspirant des implémentations en Map Reduce. Cette approche était très formatrice et m'a permis de cerner encore mieux les enjeux de confidentialité et de performance des algorithmes d'intelligence artificielle.</p><br/>
+
+</div>
