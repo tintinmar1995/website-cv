@@ -1,4 +1,4 @@
-class SkillsRow extends HTMLElement {
+class Cours extends HTMLElement {
   constructor() {
     // Always call parent constructor first
     super();
@@ -7,6 +7,9 @@ class SkillsRow extends HTMLElement {
     var template = document.createElement("TEMPLATE");
       template.innerHTML = `
       <style>
+        p {
+          margin: 0px
+        }
         .staticrow{
           display: flex;
           margin-bottom: 10px;
@@ -15,7 +18,7 @@ class SkillsRow extends HTMLElement {
           text-align: right;
           padding-left: 2%;
           padding-right: 5px;
-          flex: 0 0 150px;
+          flex: 0 0 80px;
         }
         .columnrightnoborder {
           padding-left: 5px;
@@ -24,8 +27,13 @@ class SkillsRow extends HTMLElement {
         }
       </style>
       <div class="staticrow">
-        <div class="columnleft"><b><slot name='topic'>Title..</slot></b></div>
-        <div class="columnrightnoborder"> <slot name='list'>Some skills...</slot></div>
+        <div class="columnleft" id='year'></div>
+        <div class="columnrightnoborder">
+          <b id='label'></b>
+          <p>
+            <slot name='desc'>Desc...</slot><a id="link"></a>
+          </p>
+        </div>
       </div>
       `
     // Create new Shadow Root
@@ -36,12 +44,16 @@ class SkillsRow extends HTMLElement {
   }
 
   connectedCallback() {
-    let topic = this.getAttribute('topic') || '';
+    let year = this.getAttribute('year') || '';
+    if(year){
+      this.shadowRoot.querySelector('#year').innerText = year;
+    }
 
-    if(topic){
-      const shadow = this.shadowRoot;
-      shadow.querySelector('[name=topic]').innerText = topic;
+    let label = this.getAttribute('label') || '';
+    if(label){
+      this.shadowRoot.querySelector('#label').innerText = label;
     }
   }
 }
-customElements.define("skills-row", SkillsRow);
+
+customElements.define("row-teaching", Cours);
