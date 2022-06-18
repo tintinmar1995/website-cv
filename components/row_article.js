@@ -25,6 +25,7 @@ class Article extends HTMLElement {
           min-width: 500px;
           flex:0 0 80%;
         }
+
       </style>
       <div class="staticrow">
         <div class="columnleft" id='year'></div>

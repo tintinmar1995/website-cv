@@ -12,6 +12,11 @@ class XPRow extends HTMLElement {
           margin:0px;
         }
 
+        ::slotted([slot=desc]) {
+          text-align: justify;
+          text-justify: inter-word;
+        }
+
         .xp-skills {
           list-style: none;
           margin-left: 10px;
@@ -31,8 +36,8 @@ class XPRow extends HTMLElement {
         }
 
         .xp-skills > ::slotted(li):before {
-          content: ">";
-          padding-right: 5px;
+          content: "> ";
+          padding-right: 4px;
         }
 
         .xp-logo {
@@ -68,7 +73,7 @@ class XPRow extends HTMLElement {
           text-align: right;
           padding-left: 2%;
           padding-right: 5px;
-          flex: 0 0 80px;
+          flex: 0 0 85px;
         }
 
         .columnright {
