@@ -25,6 +25,7 @@
   <link rel="stylesheet" href="css/balloon.min.css">
   <script src="https://kit.fontawesome.com/ae25e386da.js" crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="components/row_skills.js"></script>
   <script>
     function showXpImg(name, bool){
       if(bool){
@@ -83,36 +84,29 @@
 
     <h2 style="margin-bottom:0px;">Compétences</h2><hr>
     <div class="container">
-      <div class="staticrow">
-        <div class="columnleft"><b>Langues</b></div>
-        <div class="columnrightnoborder">Français, Anglais (C2 - TOEIC en 2017), Espagnol (A2)</div>
-      </div>
+      <skills-row title='Langues'>
+        <span slot="list">Français, Anglais (C2 - TOEIC en 2017), Espagnol (A2)</span>
+      </skills-row>
       <br/>
-      <div class="staticrow">
-        <div class="columnleft"><b>Machine Learning</b></div>
-        <div class="columnrightnoborder">Modèles linéaires, Réseaux de neurones, SVM, Arbres de décision, Méthodes d’agrégation.</div>
-      </div>
-      <div class="staticrow">
-        <div class="columnleft"><b>Statistique</b></div>
-        <div class="columnrightnoborder">Statistiques exploratoires, Tests, Séries temporelles et modèle de durées, Gestion des données manquantes et ré-échantillonnage, Méthodes d’anonymisation</div>
-      </div>
+      <skills-row title="Machine Learning">
+        <span slot="list">Modèles linéaires, Réseaux de neurones, SVM, Arbres de décision, Méthodes d’agrégation.</span>
+      </skills-row>
+      <skills-row title="Statistique">
+        <span slot="list">Statistiques exploratoires, Tests, Séries temporelles et modèle de durées, Gestion des données manquantes et ré-échantillonnage, Méthodes d’anonymisation</span>
+      </skills-row>
       <br/>
-      <div class="staticrow">
-        <div class="columnleft"><b>Bases de données</b></div>
-        <div class="columnrightnoborder">SQL, CouchDB, Neo4j</div>
-      </div>
-      <div class="staticrow">
-        <div class="columnleft"><b>Développement</b></div>
-        <div class="columnrightnoborder">Python, R • Java, C++, Go • Basic • Bash, Git, Linux</div>
-      </div>
-      <div class="staticrow">
-        <div class="columnleft"><b>... Frontend</b></div>
-        <div class="columnrightnoborder">HTML/CSS/JS • RShiny • Streamlit • ReactJS, VueJS • Android</div>
-      </div>
-      <div class="staticrow">
-        <div class="columnleft"><b>... Backend</b></div>
-        <div class="columnrightnoborder">PHP, Python Flask, Python Starlette</div>
-      </div>
+      <skills-row title="Bases de données">
+        <span slot="list">SQL, CouchDB, Neo4j</span>
+      </skills-row>
+      <skills-row title="Développement">
+        <span slot="list">Python, R • Java, C++, Go • Basic • Bash, Git, Linux</span>
+      </skills-row>
+      <skills-row title="... Frontend">
+        <span slot="list">HTML/CSS/JS • RShiny • Streamlit • ReactJS, VueJS • Android</span>
+      </skills-row>
+      <skills-row title="... Backend">
+        <span slot="list">PHP, Python Flask, Python Starlette</span>
+      </skills-row>
     </div>
 
   <!-- ISSUE WHEN WIDTH < 888-->
