@@ -29,18 +29,19 @@ p {
 .topnav span, .topnav a {
   float: right;
   color: #f2f2f2;
-  margin:3px;
+  margin: 5px;
   border-radius:6px;
   text-align: center;
-  padding: 14px 16px;
+  padding: 15px 15px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 15px;
 }
 
 .topnav a.active {
   /*background-color: rgba(50, 50, 250, 0.8);*/
   background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
+  cursor: default;
 }
 
 .columnleft {

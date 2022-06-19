@@ -36,13 +36,13 @@
   <div class="cv">
 
   <div class="topnav">
-    <a href="https://mrtn77m2sn-drive.mycozy.cloud/public?sharecode=PgWDkkEDP2la#/" class="active">Version PDF</a>
+    <a onclick="window.print()" class="active">Version imprimable</a>
     <!--<a id="show-settings"><i class="fas fa-cogs"></i></a>-->
     <span id="update" style="font-size: 10pt; color:white;">Actualisé en Juin 2022</span>
   </div>
 
   <!-- CONTENT -->
-  <div style="margin:4%">
+  <div id="content" style="margin:4%">
 
     <!-- HEADER -->
     <h1 style="margin-bottom:0px;">Martin MASSON</h1>
@@ -54,13 +54,14 @@
       <a href="https://github.com/tintinmar1995" class="fa fa-github"></a>
       <a href="https://gitlab.com/mmasson-datastorm" class="fa fa-gitlab"></a>
     </p>
-    <br/>
+    <div class='vertical-sep' style="margin:10px"></div>
 
     <div id="email-adress" style="display:none;">
       <p><b style="margin-right:10px">@</b><a aria-label="Compatible chiffrement ProtonMail" data-balloon-pos="up" style="text-decoration:none;" style="margin-right:10px">martin.masson.pro[at]protonmail.com</a></p>
       <p><b style="margin-right:10px">@</b>martin.masson[at]datastorm.fr</p>
     </div>
-    <br/>
+    <div class='vertical-sep' style="margin:30px"></div>
+
     <SCRIPT>
       document.getElementById("display-email").onclick = function(){
         const a = document.getElementById("email-adress").style.display
@@ -72,13 +73,13 @@
     <div class="container">
       <skills-row topic='Langues'>
         <span slot="list">Français, Anglais (C2 - TOEIC en 2017), Espagnol (A2)</span></skills-row>
-      <br/>
+      <div class='vertical-sep' style="margin:10px"></div>
 
       <skills-row topic="Machine Learning">
         <span slot="list">Modèles linéaires, Réseaux de neurones, SVM, Arbres de décision, Méthodes d’agrégation.</span></skills-row>
       <skills-row topic="Statistique">
         <span slot="list">Statistiques exploratoires, Tests, Séries temporelles et modèle de durées, Gestion des données manquantes et ré-échantillonnage, Méthodes d’anonymisation</span></skills-row>
-      <br/>
+      <div class='vertical-sep' style="margin:10px"></div>
 
       <skills-row topic="Bases de données">
         <span slot="list">SQL, CouchDB, Neo4j</span></skills-row>
@@ -91,7 +92,7 @@
     </div>
 
   <!-- ISSUE WHEN WIDTH < 888-->
-  <h2 style="margin-bottom:0px;">Expérience <span style="font-size:10pt;font-weight:normal;">(Plus d'info en cliquant sur <i class="fas fa-plus-square"></i>)</span></h2><hr>
+  <h2 style="margin-bottom:0px;">Expérience <span id="xp-help" style="font-size:10pt;font-weight:normal;">(Plus d'info en cliquant sur <i class="fas fa-plus-square"></i>)</span></h2><hr>
 
     <xp-row
       label="Consultant en Data Science, @ DATASTORM" hashtag="ds"
@@ -216,7 +217,7 @@
 
   </div>
 
-  <div style="margin:100px"></div>
+  <div class='vertical-sep' style="margin:100px"></div>
 
   </div>
 
@@ -284,8 +285,16 @@
       document.getElementById("email-adress").style.display = "block";
       document.querySelector(".topnav").style.display = "none";
       document.querySelector("#contact").style.display = "none";
+      document.querySelector("#xp-help").style.display = "none";
+        document.querySelector("#content").style.margin = "0%";
       for (elem of document.querySelectorAll("[slot=btn-i]")) {
         elem.style.display = "none";
+      }
+      for (elem of document.querySelectorAll(".vertical-sep")) {
+        elem.style.display = "none";
+      }
+      for (elem of document.querySelectorAll(".container")) {
+        elem.style['margin-bottom'] = "0px";
       }
     };
 
