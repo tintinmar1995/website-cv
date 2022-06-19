@@ -25,6 +25,8 @@
   <link rel="stylesheet" href="css/balloon.min.css">
   <script src="https://kit.fontawesome.com/ae25e386da.js" crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script src="js/beforeprint.js"></script>
   <script src="components/row_article.js"></script>
   <script src="components/row_school.js"></script>
   <script src="components/row_skills.js"></script>
@@ -35,192 +37,191 @@
 
   <div class="cv">
 
-  <div class="topnav">
-    <a onclick="window.print()" class="active">Version imprimable</a>
-    <!--<a id="show-settings"><i class="fas fa-cogs"></i></a>-->
-    <span id="update" style="font-size: 10pt; color:white;">Actualisé en Juin 2022</span>
-  </div>
-
-  <!-- CONTENT -->
-  <div id="content" style="margin:4%">
-
-    <!-- HEADER -->
-    <h1 style="margin-bottom:0px;">Martin MASSON</h1>
-    <h2 style="margin-top:0px;">Statisticien et ingénieur des données</h2>
-
-    <p id="contact">
-      <a id="display-email" class="fa fa-envelope"></a>
-      <a href="https://www.linkedin.com/in/martin-masson-data-scientist/" class="fa fa-linkedin"></a>
-      <a href="https://github.com/tintinmar1995" class="fa fa-github"></a>
-      <a href="https://gitlab.com/mmasson-datastorm" class="fa fa-gitlab"></a>
-    </p>
-    <div class='vertical-sep' style="margin:10px"></div>
-
-    <div id="email-adress" style="display:none;">
-      <p><b style="margin-right:10px">@</b><a aria-label="Compatible chiffrement ProtonMail" data-balloon-pos="up" style="text-decoration:none;" style="margin-right:10px">martin.masson.pro[at]protonmail.com</a></p>
-      <p><b style="margin-right:10px">@</b>martin.masson[at]datastorm.fr</p>
+    <div class="topnav">
+      <a id="print" onclick="window.print()" class="active">Version imprimable</a>
+      <!--<a id="show-settings"><i class="fas fa-cogs"></i></a>-->
+      <span id="update" style="font-size: 10pt; color:white;">Actualisé en Juin 2022</span>
     </div>
-    <div class='vertical-sep' style="margin:30px"></div>
 
-    <SCRIPT>
-      document.getElementById("display-email").onclick = function(){
-        const a = document.getElementById("email-adress").style.display
-        document.getElementById("email-adress").style.display = a=="none" ? "block" : "none"
-      }
-    </SCRIPT>
+    <!-- CONTENT -->
+    <div id="content" style="margin:4%">
 
-    <h2 style="margin-bottom:0px;">Compétences</h2><hr>
+      <!-- HEADER -->
+      <h1 style="margin-bottom:0px;">Martin MASSON</h1>
+      <h2 style="margin-top:0px;">Statisticien et ingénieur des données</h2>
+
+      <p id="contact">
+        <a id="display-email" class="fa fa-envelope"></a>
+        <a href="https://www.linkedin.com/in/martin-masson-data-scientist/" class="fa fa-linkedin"></a>
+        <a href="https://github.com/tintinmar1995" class="fa fa-github"></a>
+        <a href="https://gitlab.com/mmasson-datastorm" class="fa fa-gitlab"></a>
+      </p>
+      <div class='vertical-sep' style="margin:10px"></div>
+
+      <div id="email-adress" style="display:none;">
+        <p><b style="margin-right:10px">@</b><a aria-label="Compatible chiffrement ProtonMail" data-balloon-pos="up" style="text-decoration:none;" style="margin-right:10px">martin.masson.pro[at]protonmail.com</a></p>
+        <p><b style="margin-right:10px">@</b>martin.masson[at]datastorm.fr</p>
+      </div>
+      <SCRIPT>
+        document.getElementById("display-email").onclick = function(){
+          const a = document.getElementById("email-adress").style.display;
+          document.getElementById("email-adress").style.display = a=="none" ? "block" : "none";
+        }
+      </SCRIPT>
+      <div class='vertical-sep' style="margin:30px"></div>
+
+      <h2 style="margin-bottom:0px;">Compétences</h2><hr>
+      <div class="container">
+        <skills-row topic='Langues'>
+          <span slot="list">Français, Anglais (C2 - TOEIC en 2017), Espagnol (A2)</span></skills-row>
+        <div class='vertical-sep' style="margin:10px"></div>
+
+        <skills-row topic="Machine Learning">
+          <span slot="list">Modèles linéaires, Réseaux de neurones, SVM, Arbres de décision, Méthodes d’agrégation.</span></skills-row>
+        <skills-row topic="Statistique">
+          <span slot="list">Statistiques exploratoires, Tests, Séries temporelles et modèle de durées, Gestion des données manquantes et ré-échantillonnage, Méthodes d’anonymisation</span></skills-row>
+        <div class='vertical-sep' style="margin:10px"></div>
+
+        <skills-row topic="Bases de données">
+          <span slot="list">SQL, CouchDB, Neo4j</span></skills-row>
+        <skills-row topic="Développement">
+          <span slot="list">Python, R • Java, C++, Go • Basic • Bash, Git, Linux</span></skills-row>
+        <skills-row topic="- Backend&nbsp;">
+          <span slot="list">PHP, Python Flask, Python Starlette</span></skills-row>
+        <skills-row topic="- Frontend">
+          <span slot="list">HTML/CSS/JS • RShiny • Streamlit • ReactJS, VueJS • Android</span></skills-row>
+      </div>
+
+    <!-- ISSUE WHEN WIDTH < 888-->
+    <h2 style="margin-bottom:0px;">Expérience <span id="xp-help" style="font-size:10pt;font-weight:normal;">(Plus d'info en cliquant sur <i class="fas fa-plus-square"></i>)</span></h2><hr>
+
+      <xp-row
+        label="Consultant en Data Science, @ DATASTORM" hashtag="ds"
+        start="Depuis" end="Déc. 2019" logo="images/datastorm.png" logoWidth="80px"
+      >
+        <i slot='btn-i' class="fas fa-plus-square"></i>
+        <p slot="desc">DataStorm est l’entreprise de conseil du groupe ENSAE-ENSAI, dont appartient également le centre de recherche CREST. Tout en valorisant des activités R&D, DataStorm propose une expertise dans les domaines de l’économie, de la statistique et de l’IA.</p>
+        <li slot="skills">Traitement, management, analyse et anonymisation de données en R et Python. Conception de modèles de ML.</li>
+        <li slot="skills">Développement de packages et d'applications Web (R Shiny, Vuejs, Flask, Starlette).</li>
+        <li slot="skills">Mise en production et maintenance applicative (e.g. AWS & Azure). Intégration en continue (DevOps), suivi des performances d'un modèle (MLOps).</li>
+        <span slot="kw">Statistique</span><span slot="kw">Machine Learning</span><span slot="kw">R</span><span slot="kw">RShiny</span><span slot="kw">Python</span>
+      </xp-row>
+
+      <xp-row
+        label="Stagiaire en Data Science, @ COZY CLOUD" hashtag="cozy"
+        start="Avril 2019" end="Sept. 2019" logo="images/cozy-cloud.png" logoWidth="75px"
+      >
+        <i slot='btn-i' class="fas fa-plus-square"></i>
+        <p slot="desc">Cozy Cloud se base sur le constat simple : dans le schéma qu'est devenu internet, l'utilisateur ne contrôle plus ses données personnelles. Cozy Cloud propose alors une solution open-source de cloud personnel. Espace sécurisé où héberger ses données bancaires, ses documents, ses factures, ses notes, ses mots de passe.</p>
+        <li slot="skills">Réflexions sur la décentralisation d'algorithmes de Machine-Learning.</li>
+        <li slot="skills">Analyse critique d’un modèle de classification de libellés bancaires.</li>
+        <li slot="skills">Conception et développement d’un service web implémentant un protocole d’apprentissage supervisé dans un contexte de données décentralisées.</li>
+        <span slot="kw">Machine Learning</span><span slot="kw">GoLang</span><span slot="kw">Python</span><span slot="kw">Privacy-By-Design</span><span slot="kw">Cryptologie</span><span slot="kw">ReactJS</span>
+      </xp-row>
+
+      <xp-row
+        label="Vice-Président | Chef de Projet | DSI, @ ENSAI JUNIOR CONSULTANT" hashtag="ejc"
+        start="Fév. 2017" end="Fév. 2019" logo="images/logoEJC.png" logoWidth="100px"
+      >
+        <i slot='btn-i' class="fas fa-plus-square"></i>
+        <p slot="desc">ENSAI junior Consultant est la Junior-Entreprise de l’ENSAI, spécialisée dans le domaine des statistiques. Une JE est une association à visée pédagogique, gérée par des étudiants comme s'il s'agissait d'une mini-entreprise. Elle permet aux autres étudiants de mettre en pratique les enseignements dispensés en cours. Sur chaque projet, un administrateur fait l’interface entre un client et un consultant.</p>
+        <li slot="skills">Participation à la constitution et au management d'une équipe de 19 personnes.</li>
+        <li slot="skills">Co-élaboration d'une stratégie sur 3 ans et co-préparation d'un audit complet.</li>
+        <li slot="skills">Rédaction de propositions commerciales, suivi administratif, gestion de la relation client et management de consultant.e.s.</li>
+        <li slot="skills">Maintenance d'un site, création d'un blog et implémentation de la première version de l'application Android d'EjC.</li>
+        <span slot="kw">Management</span><span slot="kw">Statistique</span><span slot="kw">Android</span><span slot="kw">HTML/CSS/JS/PHP</span>
+      </xp-row>
+
+      <xp-row
+        label="Stagiaire sur le projet de rénovation de la CSP, @ DIRECTION GÉRÉNALE DE L’INSEE" hashtag="insee"
+        start="Juin 2018" end="Août 2018" logo="images/insee.png" logoWidth="60px"
+      >
+        <p slot="desc">L’Institut national de la statistique et des études économiques collecte, produit, analyse et diffuse des informations sur l’économie et la société françaises. Elle fut co-responsable à la fin des années 2010 de la rénovation des catégories socio-professionnelles, langage commun permettant de représenter le monde social.</p>
+        <i slot='btn-i' class="fas fa-plus-square"></i>
+        <li slot="skills">Conception d'un classeur LibreOffice "augmenté" grâce à des macros.</li>
+        <li slot="skills">Automatisation de la création d'une documentation écrite en LaTex.</li>
+        <span slot="kw">Statistique Exploratoire</span><span slot="kw">Modélisation</span><span slot="kw">LibreOffice Basic</span><span slot="kw">Python</span><span slot="kw">LaTex</span><span slot="kw">R</span>
+    </xp-row>
+
+
+    <h2 style="margin-bottom:0px;">Formation</h2><hr>
     <div class="container">
-      <skills-row topic='Langues'>
-        <span slot="list">Français, Anglais (C2 - TOEIC en 2017), Espagnol (A2)</span></skills-row>
-      <div class='vertical-sep' style="margin:10px"></div>
-
-      <skills-row topic="Machine Learning">
-        <span slot="list">Modèles linéaires, Réseaux de neurones, SVM, Arbres de décision, Méthodes d’agrégation.</span></skills-row>
-      <skills-row topic="Statistique">
-        <span slot="list">Statistiques exploratoires, Tests, Séries temporelles et modèle de durées, Gestion des données manquantes et ré-échantillonnage, Méthodes d’anonymisation</span></skills-row>
-      <div class='vertical-sep' style="margin:10px"></div>
-
-      <skills-row topic="Bases de données">
-        <span slot="list">SQL, CouchDB, Neo4j</span></skills-row>
-      <skills-row topic="Développement">
-        <span slot="list">Python, R • Java, C++, Go • Basic • Bash, Git, Linux</span></skills-row>
-      <skills-row topic="- Backend&nbsp;">
-        <span slot="list">PHP, Python Flask, Python Starlette</span></skills-row>
-      <skills-row topic="- Frontend">
-        <span slot="list">HTML/CSS/JS • RShiny • Streamlit • ReactJS, VueJS • Android</span></skills-row>
+      <row-school year="2019" label="Statistique et Ingénierie des Données">
+        <span slot="desc">Ecole Nationale de la Statistique et de l'Analyse de l'Information (<a href="https://ensai.fr/">ENSAI</a>) - Rennes (35)</span></row-school>
+      <row-school year="2016" label="Classe Préparatoire aux Grandes Ecoles">
+        <span slot="desc">Cursus Mathématiques-Physique à Melun (77)</span></row-school>
+      <row-school year="2013" label="Baccalauréat, filière Scientifique">
+        <span slot="desc">Collège et Lycée de Nangis (77)</span></row-school>
     </div>
 
-  <!-- ISSUE WHEN WIDTH < 888-->
-  <h2 style="margin-bottom:0px;">Expérience <span id="xp-help" style="font-size:10pt;font-weight:normal;">(Plus d'info en cliquant sur <i class="fas fa-plus-square"></i>)</span></h2><hr>
-
-    <xp-row
-      label="Consultant en Data Science, @ DATASTORM" hashtag="ds"
-      start="Depuis" end="Déc. 2019" logo="images/datastorm.png" logoWidth="80px"
-    >
-      <i slot='btn-i' class="fas fa-plus-square"></i>
-      <p slot="desc">DataStorm est l’entreprise de conseil du groupe ENSAE-ENSAI, dont appartient également le centre de recherche CREST. DataStorm valorise les activités de recherche et propose une expertise dans les domaines de l’économie, de la statistique, de la data science et de l’IA.</p>
-      <li slot="skills">Simulation de courbes de consommation électrique. Optimisation d'une tarification : conception d'une méthodologie de gestion du risque.</li>
-      <li slot="skills">Mise en place de solutions pour protéger les données personnelles tout en conservant leur potentiel statistique.</li>
-      <li slot="skills">Mise en production. Support et suivi d'applications en production (DevOps & MLOps), potentiellement dans une architecture Cloud (Azure et AWS).</li>
-      <li slot="skills">Conception et développement d'applications Web via la librairie RShiny.</li>
-      <span slot="kw">Statistique</span><span slot="kw">Machine Learning</span><span slot="kw">R</span><span slot="kw">RShiny</span><span slot="kw">Python</span>
-    </xp-row>
-
-    <xp-row
-      label="Stagiaire en Data Science, @ COZY CLOUD" hashtag="cozy"
-      start="Avril 2019" end="Sept. 2019" logo="images/cozy-cloud.png" logoWidth="75px"
-    >
-      <i slot='btn-i' class="fas fa-plus-square"></i>
-      <p slot="desc">Cozy Cloud se base sur le constat simple : dans le schéma qu'est devenu internet, l'utilisateur ne contrôle plus ses données personnelles. Cozy Cloud propose alors une solution open-source de cloud personnel. Espace sécurisé où héberger ses données bancaires, ses documents, ses factures, ses notes, ses mots de passe.</p>
-      <li slot="skills">Réflexions sur la décentralisation d'algorithmes de Machine-Learning.</li>
-      <li slot="skills">Analyse critique d’un modèle de classification de libellés bancaires.</li>
-      <li slot="skills">Conception et développement d’un service web implémentant un protocole d’apprentissage supervisé dans un contexte de données décentralisées.</li>
-      <span slot="kw">Machine Learning</span><span slot="kw">GoLang</span><span slot="kw">Python</span><span slot="kw">Privacy-By-Design</span><span slot="kw">Cryptologie</span><span slot="kw">ReactJS</span>
-    </xp-row>
-
-    <xp-row
-      label="Vice-Président | Chef de Projet | DSI, @ ENSAI JUNIOR CONSULTANT" hashtag="ejc"
-      start="Fév. 2017" end="Fév. 2019" logo="images/logoEJC.png" logoWidth="100px"
-    >
-      <i slot='btn-i' class="fas fa-plus-square"></i>
-      <p slot="desc">ENSAI junior Consultant est la Junior-Entreprise de l’ENSAI, spécialisée dans le domaine des statistiques. Une JE est une association à visée pédagogique, gérée par des étudiants comme s'il s'agissait d'une mini-entreprise. Elle permet aux autres étudiants de mettre en pratique les enseignements dispensés en cours. Sur chaque projet, un administrateur fait l’interface entre un client et un consultant.</p>
-      <li slot="skills">Participation à la constitution et au management d'une équipe de 19 personnes.</li>
-      <li slot="skills">Co-élaboration d'une stratégie sur 3 ans et co-préparation d'un audit complet.</li>
-      <li slot="skills">Rédaction de propositions commerciales, suivi administratif, gestion de la relation client et management de consultant.e.s.</li>
-      <li slot="skills">Maintenance d'un site, création d'un blog et implémentation de la première version de l'application Android d'EjC.</li>
-      <span slot="kw">Management</span><span slot="kw">Statistique</span><span slot="kw">Android</span><span slot="kw">HTML/CSS/JS/PHP</span>
-    </xp-row>
-
-    <xp-row
-      label="Stagiaire sur le projet de rénovation de la CSP, @ DIRECTION GÉRÉNALE DE L’INSEE" hashtag="insee"
-      start="Juin 2018" end="Août 2018" logo="images/insee.png" logoWidth="60px"
-    >
-      <p slot="desc">L’Institut national de la statistique et des études économiques collecte, produit, analyse et diffuse des informations sur l’économie et la société françaises. Elle fut co-responsable à la fin des années 2010 de la rénovation des catégories socio-professionnelles, langage commun permettant de représenter le monde social.</p>
-      <i slot='btn-i' class="fas fa-plus-square"></i>
-      <li slot="skills">Conception d'un classeur LibreOffice "augmenté" grâce à des macros.</li>
-      <li slot="skills">Automatisation de la création d'une documentation écrite en LaTex.</li>
-      <span slot="kw">Statistique Exploratoire</span><span slot="kw">Modélisation</span><span slot="kw">LibreOffice Basic</span><span slot="kw">Python</span><span slot="kw">LaTex</span><span slot="kw">R</span>
-  </xp-row>
-
-
-  <h2 style="margin-bottom:0px;">Formation</h2><hr>
-  <div class="container">
-    <row-school year="2019" label="Statistique et Ingénierie des Données">
-      <span slot="desc">Ecole Nationale de la Statistique et de l'Analyse de l'Information (<a href="https://ensai.fr/">ENSAI</a>) - Rennes (35)</span></row-school>
-    <row-school year="2016" label="Classe Préparatoire aux Grandes Ecoles">
-      <span slot="desc">Cursus Mathématiques-Physique à Melun (77)</span></row-school>
-    <row-school year="2013" label="Baccalauréat, filière Scientifique">
-      <span slot="desc">Collège et Lycée de Nangis (77)</span></row-school>
-  </div>
-
-  <h2 style="margin-bottom:0px;">Enseignement</h2><hr>
-  <div class="container">
-    <row-teaching year="2021" label="Formation « Développement en collaboration grâce à Git », dispensée aux consultants de DATASTORM (7h)">
-      <p slot='desc'>Configuration de Git, réécriture d'historique, organisation d'une équipe autour de Git, bonnes pratiques, soumissions et relecture de Merge/Pull Requests.</p></row-teaching>
-  </div>
-
-  <h2 style="margin-bottom:0px;">Articles</h2><hr>
-  <div class="container">
-
-    <row-article
-      year='2020' label="Replay webinar : Comment concilier Performance business et Règlementation grâce à l’Anonymisation des données ?"
-      href="https://www.datastorm.fr/replay-comment-concilier-performance-business-et-reglementation-grace-a-lanonymisation-des-donnees/" link="Voir le replay"
-    >
-      <span slot='desc'>Pourquoi anonymiser ? Choix de la méthode ? Comment mettre en oeuvre la k-anonymisation ? Comment outiller un département/une activité pour mener des études avec la confidentialité différentielle ?</span>
-    </row-article>
-
-    <row-article
-      year='2020' label="Déployer une procédure d'anonymisation"
-      href="https://www.datastorm.fr/livre-blanc-datastorm-deployer-une-procedure-danonymisation/"
-    >
-      <span slot='desc'>Dans ce Livre Blanc, nous [DataStorm] établissons les bases permettant de déployer une procédure générique et rigoureuse d’anonymisation.</span>
-    </row-article>
-
-    <row-article
-      year='2019' label="Entrainer une IA sans posséder la donnée est possible"
-      href="https://blog.cozy.io/fr/entrainer-une-ia-sans-posseder-la-donnee-est-possible/"
-    >
-      <span slot='desc'>Présentation d'un processus d'entraînement d'un modèle de Machine Learning sur des données distribuées dans des clouds personnels.</span>
-    </row-article>
-
-    <row-article
-      year='2018' label="Coopération EjC & Breizh Data Club"
-      href="https://www.blog.ejc.fr/art18_010.php"
-    >
-      <span slot='desc'>Première coopération entre ENSAI junior Consultant, la Junior-Entreprise de l'ENSAI et le Breizh Data Club, l'association des amoureux de la data.</span>
-    </row-article>
-
-    <row-article
-      year='2017' label="EjC au salon entreprendre dans l'Ouest"
-      href="https://www.blog.ejc.fr/art17_017.php"
-    >
-      <span slot='desc'>Article écrit suite à la présence d'ENSAI junior Consultant sur le salon rennais Entreprendre dans l'Ouest.</span>
-    </row-article>
-  </div>
-
-  <h2 style="margin-bottom:0px;">Bénévolat</h2><hr>
-  <div class="container">
-    <div class="staticrow">
-      <div class="columnleft">2020</div>
-      <div class="columnrightnoborder">Développement d'un site web de créations et de gestion de commandes pour la vente de produits agricoles</div>
+    <h2 style="margin-bottom:0px;">Enseignement</h2><hr>
+    <div class="container">
+      <row-teaching year="2021" label="Formation « Développement en collaboration grâce à Git », dispensée aux consultants de DATASTORM (7h)">
+        <p slot='desc'>Configuration de Git, réécriture d'historique, organisation d'une équipe autour de Git, bonnes pratiques, soumissions et relecture de Merge/Pull Requests.</p></row-teaching>
     </div>
-    <div class="staticrow">
-      <div class="columnleft">2017</div>
-      <div class="columnrightnoborder">Woofing en tant que fermier bénévole à Andebu (Norvège) : entretien d’enclos, surveillance d’animaux</div>
+
+    <h2 style="margin-bottom:0px;">Articles</h2><hr>
+    <div class="container">
+
+      <row-article
+        year='2020' label="Replay webinar : Comment concilier Performance business et Règlementation grâce à l’Anonymisation des données ?"
+        href="https://www.datastorm.fr/replay-comment-concilier-performance-business-et-reglementation-grace-a-lanonymisation-des-donnees/" link="Voir le replay"
+      >
+        <span slot='desc'>Pourquoi anonymiser ? Choix de la méthode ? Comment mettre en oeuvre la k-anonymisation ? Comment outiller un département/une activité pour mener des études avec la confidentialité différentielle ?</span>
+      </row-article>
+
+      <row-article
+        year='2020' label="Déployer une procédure d'anonymisation"
+        href="https://www.datastorm.fr/livre-blanc-datastorm-deployer-une-procedure-danonymisation/"
+      >
+        <span slot='desc'>Dans ce Livre Blanc, nous [DataStorm] établissons les bases permettant de déployer une procédure générique et rigoureuse d’anonymisation.</span>
+      </row-article>
+
+      <row-article
+        year='2019' label="Entrainer une IA sans posséder la donnée est possible"
+        href="https://blog.cozy.io/fr/entrainer-une-ia-sans-posseder-la-donnee-est-possible/"
+      >
+        <span slot='desc'>Présentation d'un processus d'entraînement d'un modèle de Machine Learning sur des données distribuées dans des clouds personnels.</span>
+      </row-article>
+
+      <row-article
+        year='2018' label="Coopération EjC & Breizh Data Club"
+        href="https://www.blog.ejc.fr/art18_010.php"
+      >
+        <span slot='desc'>Première coopération entre ENSAI junior Consultant, la Junior-Entreprise de l'ENSAI et le Breizh Data Club, l'association des amoureux de la data.</span>
+      </row-article>
+
+      <row-article
+        year='2017' label="EjC au salon entreprendre dans l'Ouest"
+        href="https://www.blog.ejc.fr/art17_017.php"
+      >
+        <span slot='desc'>Article écrit suite à la présence d'ENSAI junior Consultant sur le salon rennais Entreprendre dans l'Ouest.</span>
+      </row-article>
     </div>
-    <div class="staticrow">
-      <div class="columnleft">2011</div>
-      <div class="columnrightnoborder">Membre de la communauté Genius France, gérant la partie française de ce site d’explication de textes</div>
+
+    <h2 style="margin-bottom:0px;">Bénévolat</h2><hr>
+    <div class="container">
+      <div class="staticrow">
+        <div class="columnleft">2020</div>
+        <div class="columnrightnoborder">Développement d'un site web de créations et de gestion de commandes pour la vente de produits agricoles</div>
+      </div>
+      <div class="staticrow">
+        <div class="columnleft">2017</div>
+        <div class="columnrightnoborder">Woofing en tant que fermier bénévole à Andebu (Norvège) : entretien d’enclos, surveillance d’animaux</div>
+      </div>
+      <div class="staticrow">
+        <div class="columnleft">2011</div>
+        <div class="columnrightnoborder">Membre de la communauté Genius France, gérant la partie française de ce site d’explication de textes</div>
+      </div>
     </div>
-  </div>
+
+    </div>
+
+    <div class='vertical-sep' style="margin:100px"></div>
 
   </div>
 
-  <div class='vertical-sep' style="margin:100px"></div>
-
-  </div>
-
+  <!-- START MODAL EXPERIENCE -->
   <div id="myModal" class="modal">
     <div class="modal-content">
       <div class="modal-header">
@@ -241,63 +242,48 @@
         loadModal("#modalEJC", "html/desc-ejc.html");
         loadModal("#modalINSEE", "html/desc-insee.html");
       </script>
+    </div>
+    <SCRIPT>
+      // Get the modal
+      var modal = document.getElementById("myModal");
+      var span = document.getElementsByClassName("close")[0];
+      // When the user clicks on <span> (x), close the modal
+      // When the user clicks anywhere outside of the modal, close it
+      span.onclick = function(){history.back();}
+      window.onclick = function(event){if (event.target == modal) {span.onclick()}}
+
+      companies = ['ds', 'cozy', 'ejc', 'insee']
+
+      window.addEventListener("hashchange", function(){
+        name = window.location.hash.replace("#", "")
+        if(companies.indexOf(name) >= 0){
+          modal.style.display = "block";
+          modal.scrollTop = 0;
+          document.documentElement.style.overflow = 'hidden';
+          document.body.scroll = "no";
+          for (elem of document.getElementsByClassName("modal-"+name)){
+            elem.style.display = 'block';
+          }
+          document.getElementsByClassName("cv")[0].style = "-webkit-filter: blur(3px) grayscale(90%)";
+        } else {
+          modal.style.display = "none";
+          document.documentElement.style.overflow = 'scroll';
+          document.body.scroll = "yes";
+          for (elem of document.getElementsByClassName("modal-title")){
+            elem.style.display = 'none';
+          }
+          for (elem of document.getElementsByClassName("modal-body")){
+            elem.style.display = 'none';
+          }
+          document.getElementsByClassName("cv")[0].style = "";
+        }
+      });
+
+    </SCRIPT>
   </div>
+  <!-- END OF MODAL EXPERIENCE -->
 
-  <SCRIPT>
-    /* MODAL */
 
-    // Get the modal
-    var modal = document.getElementById("myModal");
-    var span = document.getElementsByClassName("close")[0];
-    // When the user clicks on <span> (x), close the modal
-    // When the user clicks anywhere outside of the modal, close it
-    span.onclick = function(){history.back();}
-    window.onclick = function(event){if (event.target == modal) {span.onclick()}}
 
-    companies = ['ds', 'cozy', 'ejc', 'insee']
-
-    window.addEventListener("hashchange", function(){
-      name = window.location.hash.replace("#", "")
-      if(companies.indexOf(name) >= 0){
-        modal.style.display = "block";
-        modal.scrollTop = 0;
-        document.documentElement.style.overflow = 'hidden';
-        document.body.scroll = "no";
-        for (elem of document.getElementsByClassName("modal-"+name)){
-          elem.style.display = 'block';
-        }
-        document.getElementsByClassName("cv")[0].style = "-webkit-filter: blur(3px) grayscale(90%)";
-      } else {
-        modal.style.display = "none";
-        document.documentElement.style.overflow = 'scroll';
-        document.body.scroll = "yes";
-        for (elem of document.getElementsByClassName("modal-title")){
-          elem.style.display = 'none';
-        }
-        for (elem of document.getElementsByClassName("modal-body")){
-          elem.style.display = 'none';
-        }
-        document.getElementsByClassName("cv")[0].style = "";
-      }
-    });
-
-    window.onbeforeprint = (event) => {
-      document.getElementById("email-adress").style.display = "block";
-      document.querySelector(".topnav").style.display = "none";
-      document.querySelector("#contact").style.display = "none";
-      document.querySelector("#xp-help").style.display = "none";
-        document.querySelector("#content").style.margin = "0%";
-      for (elem of document.querySelectorAll("[slot=btn-i]")) {
-        elem.style.display = "none";
-      }
-      for (elem of document.querySelectorAll(".vertical-sep")) {
-        elem.style.display = "none";
-      }
-      for (elem of document.querySelectorAll(".container")) {
-        elem.style['margin-bottom'] = "0px";
-      }
-    };
-
-  </SCRIPT>
 </BODY>
 </html>

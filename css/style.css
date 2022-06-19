@@ -79,8 +79,8 @@ transform: scale(1, 1) translateY(0);
 }
 }
 
-@media (max-width:500px) {
-  .columnleft { flex: 0 0 80px; }
+@media (max-width:700px) {
+  #print { display: None; }
 }
 
 .container{
