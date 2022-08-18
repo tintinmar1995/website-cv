@@ -221,7 +221,7 @@
 
   </div>
 
-  <!-- START MODAL EXPERIENCE -->
+  <!-- START MODAL -->
   <div id="myModal" class="modal">
     <div class="modal-content">
       <div class="modal-header">
@@ -254,7 +254,7 @@
 
       companies = ['ds', 'cozy', 'ejc', 'insee']
 
-      window.addEventListener("hashchange", function(){
+      openModal = function(){
         name = window.location.hash.replace("#", "")
         if(companies.indexOf(name) >= 0){
           modal.style.display = "block";
@@ -277,7 +277,10 @@
           }
           document.getElementsByClassName("cv")[0].style = "";
         }
-      });
+      }
+
+      window.addEventListener("hashchange", openModal);
+      window.addEventListener("DOMContentLoaded", openModal);
 
     </SCRIPT>
   </div>
