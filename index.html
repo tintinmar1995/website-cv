@@ -249,12 +249,15 @@
       var span = document.getElementsByClassName("close")[0];
       // When the user clicks on <span> (x), close the modal
       // When the user clicks anywhere outside of the modal, close it
-      span.onclick = function(){history.back();}
+      span.onclick = function(){
+        window.location.hash = "";
+        locationHashToModal();
+      }
       window.onclick = function(event){if (event.target == modal) {span.onclick()}}
 
       companies = ['ds', 'cozy', 'ejc', 'insee']
 
-      openModal = function(){
+      locationHashToModal = function(){
         name = window.location.hash.replace("#", "")
         if(companies.indexOf(name) >= 0){
           modal.style.display = "block";
@@ -279,8 +282,8 @@
         }
       }
 
-      window.addEventListener("hashchange", openModal);
-      window.addEventListener("DOMContentLoaded", openModal);
+      window.addEventListener("hashchange", locationHashToModal);
+      window.addEventListener("DOMContentLoaded", locationHashToModal);
 
     </SCRIPT>
   </div>
