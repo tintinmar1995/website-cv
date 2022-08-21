@@ -9,7 +9,6 @@ class SkillsRow extends HTMLElement {
       <style>
         .staticrow{
           display: flex;
-          margin-bottom: 10px;
         }
         .columnleft {
           text-align: right;
