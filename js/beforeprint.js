@@ -4,9 +4,6 @@ function longPrintable(){
   document.querySelector("#contact").style.display = "none";
   document.querySelector("#xp-help").style.display = "none";
   document.querySelector("#content").style.margin = "0%";
-  for (elem of document.querySelectorAll("[slot=btn-i]")) {
-    elem.style.display = "none";
-  }
   for (elem of document.querySelectorAll(".vertical-sep")) {
     elem.style.display = "none";
   }
@@ -15,6 +12,7 @@ function longPrintable(){
   }
   for (elem of document.getElementsByTagName("xp-row")) {
     elem.hideExternalLink();
+    elem.hideModalButton();
   }
 }
 

@@ -173,5 +173,9 @@ class XPRow extends HTMLElement {
     this.shadowRoot.querySelector('#website').style.display = 'none';
   }
 
+  hideModalButton(){
+    this.shadowRoot.querySelector('#modal-btn').style.display = 'none';
+  }
+
 }
 customElements.define("xp-row", XPRow);
