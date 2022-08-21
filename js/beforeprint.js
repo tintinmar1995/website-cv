@@ -13,6 +13,9 @@ function longPrintable(){
   for (elem of document.querySelectorAll(".container")) {
     elem.style['margin-bottom'] = "0px";
   }
+  for (elem of document.getElementsByTagName("xp-row")) {
+    elem.hideExternalLink();
+  }
 }
 
 function shortPrintable(){

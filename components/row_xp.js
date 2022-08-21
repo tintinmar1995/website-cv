@@ -84,13 +84,19 @@ class XPRow extends HTMLElement {
           margin-bottom: 5px;
         }
       </style>
+      <script src="https://kit.fontawesome.com/ae25e386da.js" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       <div class="row">
         <div class="columnleft">
           <b><p id="start"></p> <p id="end"></p></b>
           <img id="logo" width="80px" class="xp-logo">
         </div>
         <div class="columnright">
-            <p><b id='title'></b></p><slot name="desc"></slot>
+            <p>
+              <b id='title'></b>
+              <a id="website"><i class="fa fa-external-link" style="margin-left: 7px; font-size: 15px; color: teal"></i></a>
+            </p>
+            <slot name="desc"></slot>
             <ul class="xp-skills"><slot name="skills"></slot></ul>
             <center>
               <a class="modal-btn" id="modal-btn" data-balloon-pos="up"
@@ -136,6 +142,13 @@ class XPRow extends HTMLElement {
       shadow.querySelector('#modal-btn').href = '#' + hashtag;
     }
 
+    let website = this.getAttribute('website') || '';
+    if(website){
+      shadow.querySelector('#website').href = website;
+    } else {
+      shadow.querySelector('#website').style.display = 'none';
+    }
+
     let logo = this.getAttribute('logo') || '';
     if(logo){
       shadow.querySelector('#logo').src = logo;
@@ -154,6 +167,10 @@ class XPRow extends HTMLElement {
 
   hideLogo(){
     this.shadowRoot.querySelector('#logo').style.display = 'none';
+  }
+
+  hideExternalLink(){
+    this.shadowRoot.querySelector('#website').style.display = 'none';
   }
 
 }
