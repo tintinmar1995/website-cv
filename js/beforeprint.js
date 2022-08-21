@@ -1,9 +1,10 @@
 function longPrintable(){
-  document.getElementById("email-adress").style.display = "block";
+  document.getElementById("email-adress").style.display = "ruby";
   document.querySelector(".topnav").style.display = "none";
   document.querySelector("#contact").style.display = "none";
   document.querySelector("#xp-help").style.display = "none";
   document.querySelector("#content").style.margin = "0%";
+  document.querySelector("#name").style.margin = "0%";
   for (elem of document.querySelectorAll(".vertical-sep")) {
     elem.style.display = "none";
   }
@@ -16,28 +17,28 @@ function longPrintable(){
   }
 }
 
-function shortPrintable(){
-  longPrintable()
-  for (elem of document.getElementsByClassName("school")) {
+function keepFirstTag(tagname){
+  for (elem of document.getElementsByTagName(tagname)) {
     elem.style.display = "none";
   }
+  document.getElementsByTagName(tagname)[0].style.display = "block";
+}
+
+function shortPrintable(){
+  longPrintable()
   for (elem of document.getElementsByClassName("benevolat")) {
     elem.style.display = "none";
   }
   for (elem of document.getElementsByClassName("articles")) {
     elem.style.display = "none";
   }
-  for (elem of document.getElementsByTagName("xp-row")) {
-    elem.style.display = "none";
-  }
-  document.getElementsByTagName("xp-row")[0].style.display = "block";
+  keepFirstTag("xp-row");
+  keepFirstTag("row-school");
 }
-
-window.onbeforeprint = (event) => {
-  longPrintable();
-};
 
 /*for (elem of document.getElementsByTagName("row-school")) {
   elem.style.display = "none";
 }
 document.getElementsByTagName("row-school")[0].style.display = "block";*/
+
+window.addEventListener('beforeprint', longPrintable);

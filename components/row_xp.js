@@ -71,7 +71,6 @@ class XPRow extends HTMLElement {
 
         .columnleft {
           text-align: right;
-          padding-left: 2%;
           padding-right: 5px;
           flex: 0 0 85px;
         }

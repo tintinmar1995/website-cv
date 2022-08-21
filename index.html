@@ -38,7 +38,12 @@
   <div class="cv">
 
     <div class="topnav">
-      <a id="print" onclick="window.print()" class="active">Version imprimable</a>
+      <a id="print" onclick="longPrintable();window.print()" class="active" style="padding:7px 15px">
+        Imprimer</br><em style="font-size: x-small;">(l'ensemble)</em>
+      </a>
+      <a id="print" onclick="shortPrintable();window.print()" class="active" style="padding:7px 15px">
+        Imprimer</br><em style="font-size: x-small;">(sur une page)</em>
+      </a>
       <!--<a id="show-settings"><i class="fas fa-cogs"></i></a>-->
       <span id="update" style="font-size: 10pt; color:white;">Actualisé en Juin 2022</span>
     </div>
@@ -47,7 +52,7 @@
     <div id="content" style="margin:4%">
 
       <!-- HEADER -->
-      <h1 style="margin-bottom:0px;">Martin MASSON</h1>
+      <h1 id="name" style="margin-bottom:0px;">Martin MASSON</h1>
       <h2 style="margin-top:0px;">Statisticien et ingénieur des données</h2>
 
       <p id="contact">
@@ -102,7 +107,7 @@
         start="Depuis" end="Déc. 2019" logo="images/datastorm.png" logoWidth="80px"
         website="https://www.datastorm.fr"
       >
-        <p slot="desc">DataStorm est l’entreprise de conseil du groupe GENES (les écoles ENSAI-ENSAE, le centre de recherche CREST). Tout en valorisant des activités R&D, DataStorm propose une expertise dans les domaines de l’économie, de la statistique et de l’IA.</p>
+        <p slot="desc">DataStorm est l’entreprise de conseil du groupe GENES (écoles ENSAI-ENSAE, centre de recherche CREST). En s'appuyant sur des activités R&D, DataStorm propose une expertise statistique et Data.</p>
         <li slot="skills">Traitement, management, analyse et anonymisation de données en R et Python. Conception de modèles de ML.</li>
         <li slot="skills">Développement de packages et d'applications Web (R Shiny, Vuejs, Flask, Starlette).</li>
         <li slot="skills">Mise en production et maintenance applicative (e.g. AWS & Azure). Intégration en continue (DevOps), suivi des performances d'un modèle (MLOps).</li>
