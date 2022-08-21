@@ -101,7 +101,7 @@ class XPRow extends HTMLElement {
             <center>
               <a class="modal-btn" id="modal-btn" data-balloon-pos="up"
                  aria-label="Plus sur cette expérience"
-              ><slot name="btn-i"></a>
+              ><i class="fa fa-plus-square"></i></a>
             </center>
             <div class="kw-row">
               <slot name="kw"></slot>
