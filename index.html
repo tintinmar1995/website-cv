@@ -144,8 +144,8 @@
     </xp-row>
 
 
-    <h2 style="margin-bottom:0px;">Formation</h2><hr>
-    <div class="container">
+    <h2 class="school" style="margin-bottom:0px;">Formation</h2><hr class="school">
+    <div class="school container">
       <row-school year="2019" label="Statistique et Ingénierie des Données">
         <span slot="desc">Ecole Nationale de la Statistique et de l'Analyse de l'Information (<a href="https://ensai.fr/">ENSAI</a>) - Rennes (35)</span></row-school>
       <row-school year="2016" label="Classe Préparatoire aux Grandes Ecoles">
@@ -154,14 +154,14 @@
         <span slot="desc">Collège et Lycée de Nangis (77)</span></row-school>
     </div>
 
-    <h2 style="margin-bottom:0px;">Enseignement</h2><hr>
-    <div class="container">
+    <h2 class="teaching" style="margin-bottom:0px;">Enseignement</h2><hr class="teaching">
+    <div class="teaching container">
       <row-teaching year="2021" label="Formation « Développement en collaboration grâce à Git », dispensée aux consultants de DATASTORM (7h)">
         <p slot='desc'>Configuration de Git, réécriture d'historique, organisation d'une équipe autour de Git, bonnes pratiques, soumissions et relecture de Merge/Pull Requests.</p></row-teaching>
     </div>
 
-    <h2 style="margin-bottom:0px;">Articles</h2><hr>
-    <div class="container">
+    <h2 class="articles" style="margin-bottom:0px;">Articles</h2><hr class="articles">
+    <div class="articles container">
 
       <row-article
         year='2020' label="Replay webinar : Comment concilier Performance business et Règlementation grâce à l’Anonymisation des données ?"
@@ -199,8 +199,8 @@
       </row-article>
     </div>
 
-    <h2 style="margin-bottom:0px;">Bénévolat</h2><hr>
-    <div class="container">
+    <h2 class="benevolat" style="margin-bottom:0px;">Bénévolat</h2><hr class="benevolat">
+    <div class="container benevolat">
       <div class="staticrow">
         <div class="columnleft">2020</div>
         <div class="columnrightnoborder">Développement d'un site web de créations et de gestion de commandes pour la vente de produits agricoles</div>
@@ -267,7 +267,7 @@
           for (elem of document.getElementsByClassName("modal-"+name)){
             elem.style.display = 'block';
           }
-          document.getElementsByClassName("cv")[0].style = "-webkit-filter: blur(3px) grayscale(90%)";
+          document.getElementsByClassName("cv")[0].style = "-webkit-filter: blur(2px) grayscale(50%)";
         } else {
           modal.style.display = "none";
           document.documentElement.style.overflow = 'scroll';
