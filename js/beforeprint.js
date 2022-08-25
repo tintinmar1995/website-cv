@@ -2,6 +2,7 @@ function longPrintable(){
   document.getElementById("email-adress").style.display = "ruby";
   document.querySelector(".topnav").style.display = "none";
   document.querySelector("#contact").style.display = "none";
+  document.querySelector("#open-source").style.display = "none";
   document.querySelector("#xp-help").style.display = "none";
   document.querySelector("#content").style.margin = "0%";
   document.querySelector("#name").style.margin = "0%";
