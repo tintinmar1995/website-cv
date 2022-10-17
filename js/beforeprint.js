@@ -6,6 +6,7 @@ function longPrintable(){
   document.querySelector("#xp-help").style.display = "none";
   document.querySelector("#content").style.margin = "0%";
   document.querySelector("#name").style.margin = "0%";
+  document.querySelector("#skills").style['overflow-x'] = "hidden";
   for (elem of document.querySelectorAll(".vertical-sep")) {
     elem.style.display = "none";
   }
