@@ -19,11 +19,11 @@ function longPrintable(){
   }
 }
 
-function keepFirstTag(tagname){
+function keepIthTag(tagname, i){
   for (elem of document.getElementsByTagName(tagname)) {
     elem.style.display = "none";
   }
-  document.getElementsByTagName(tagname)[0].style.display = "block";
+  document.getElementsByTagName(tagname)[i].style.display = "block";
 }
 
 function shortPrintable(){
@@ -34,8 +34,9 @@ function shortPrintable(){
   for (elem of document.getElementsByClassName("articles")) {
     elem.style.display = "none";
   }
-  keepFirstTag("xp-row");
-  keepFirstTag("row-school");
+  keepIthTag("xp-row", 0);
+  keepIthTag("row-school", 1);
+  keepIthTag("row-teaching", 1);
 }
 
 /*for (elem of document.getElementsByTagName("row-school")) {
