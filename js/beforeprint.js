@@ -23,20 +23,29 @@ function keepIthTag(tagname, i){
   for (elem of document.getElementsByTagName(tagname)) {
     elem.style.display = "none";
   }
-  document.getElementsByTagName(tagname)[i].style.display = "block";
+  if(Array.isArray(i)){
+    for(j of i){
+      document.getElementsByTagName(tagname)[j].style.display = "block";  
+    }
+  } else {
+    document.getElementsByTagName(tagname)[i].style.display = "block";
+  }
 }
 
 function shortPrintable(){
   longPrintable()
+  for (elem of document.querySelectorAll('[slot=skills]')){
+    elem.style.display = "none";
+  }
   for (elem of document.getElementsByClassName("benevolat")) {
     elem.style.display = "none";
   }
   for (elem of document.getElementsByClassName("articles")) {
     elem.style.display = "none";
   }
-  keepIthTag("xp-row", 0);
+  keepIthTag("xp-row", [0]);
   keepIthTag("row-school", 1);
-  keepIthTag("row-teaching", 1);
+  keepIthTag("row-teaching", [0, 1, 2]);
 }
 
 /*for (elem of document.getElementsByTagName("row-school")) {
