@@ -1,4 +1,5 @@
 function longPrintable(){
+  // display changes
   document.getElementById("email-adress").style.display = "ruby";
   document.querySelector(".topnav").style.display = "none";
   document.querySelector("#contact").style.display = "none";
@@ -13,6 +14,8 @@ function longPrintable(){
   for (elem of document.querySelectorAll(".container")) {
     elem.style['margin-bottom'] = "0px";
   }
+
+  // hide info from XP rows
   for (elem of document.getElementsByTagName("xp-row")) {
     elem.hideExternalLink();
     elem.hideModalButton();
@@ -43,9 +46,9 @@ function shortPrintable(){
   for (elem of document.getElementsByClassName("articles")) {
     elem.style.display = "none";
   }
-  keepIthTag("xp-row", [0]);
+  keepIthTag("xp-row", [0, 1]);
   keepIthTag("row-school", 1);
-  keepIthTag("row-teaching", [0, 1, 2]);
+  keepIthTag("row-teaching", [0]);
 }
 
 /*for (elem of document.getElementsByTagName("row-school")) {
