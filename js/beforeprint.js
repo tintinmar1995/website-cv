@@ -37,9 +37,9 @@ function keepIthTag(tagname, i){
 
 function shortPrintable(){
   longPrintable()
-  for (elem of document.querySelectorAll('[slot=skills]')){
-    elem.style.display = "none";
-  }
+  //for (elem of document.querySelectorAll('[slot=skills]')){
+  //  elem.style.display = "none";
+  //}
   for (elem of document.getElementsByClassName("benevolat")) {
     elem.style.display = "none";
   }
