@@ -93,7 +93,7 @@ class XPRow extends HTMLElement {
         <div class="columnright">
             <p>
               <b id='title'></b>
-              <a id="website"><i class="fa fa-external-link" style="margin-left: 7px; font-size: 15px; color: teal"></i></a>
+              <a id="website"><i class="fa fa-external-link" style="margin-left: 7px; font-size: 11px; color: teal"></i></a>
             </p>
             <slot name="desc"></slot>
             <ul class="xp-skills"><slot name="skills"></slot></ul>
