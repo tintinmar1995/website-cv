@@ -51,8 +51,18 @@
     <!-- CONTENT -->
     <div id="content" style="margin:8%; margin-top: 5%;">
 
+      <!-- SECOND NAV BAR-->
+      <center><h2 class="secondnav" style="color: #B0BEC5;">
+        <a href="#skills">Compétences</a> • 
+        <a href="#xp">Expérience</a> • 
+        <a href="#school">Formation</a> • 
+        <a href="#teaching">Enseignement</a> • 
+        <a href="#articles">Articles</a> • 
+        <a href="#benevolat">Bénévolat</a>
+      </h2></center>
+
       <!-- HEADER -->
-      <h1 id="name" style="margin-bottom:0px;">Martin MASSON</h1>
+      <h1 id="name" style="margin-top: 5%; margin-bottom:0px;">Martin MASSON</h1>
       <h2 style="margin-top:0px;">Statisticien et ingénieur des données</h2>
 
       <p id="contact">
@@ -75,8 +85,8 @@
       </SCRIPT>
       <div class='vertical-sep' style="margin:30px"></div>
 
-      <h2 style="margin-bottom:0px;">Compétences</h2><hr>
-      <div id="skills" class="container">
+      <h2 id="skills" style="margin-bottom:0px;">Compétences</h2><hr>
+      <div id="skills-content" class="container">
         <skills-row topic='Langues'>
           <span slot="list">Français, Anglais (C2 - TOEIC en 2017), Espagnol (A2)</span></skills-row>
         <div class='vertical-sep' style="margin:10px"></div>
@@ -100,7 +110,7 @@
       </div>
 
     <!-- ISSUE WHEN WIDTH < 888-->
-    <h2 style="margin-bottom:0px;">Expérience <span id="xp-help" style="font-size:10pt;font-weight:normal;">(Plus d'info en cliquant sur <i class="fas fa-plus-square"></i>)</span></h2><hr>
+    <h2 id="xp" style="margin-bottom:0px;">Expérience <span id="xp-help" style="font-size:10pt;font-weight:normal;">(Plus d'info en cliquant sur <i class="fas fa-plus-square"></i>)</span></h2><hr>
 
       <xp-row
         label="Consultant en Data Science | Chef de Projet | DSI, @ DATASTORM" hashtag="ds"
@@ -153,7 +163,7 @@
     </xp-row>
 
 
-    <h2 class="school" style="margin-bottom:0px;">Formation</h2><hr class="school">
+    <h2 class="school" id="school" style="margin-bottom:0px;">Formation</h2><hr class="school">
     <div class="school container">
       <row-school year="2022" label="Norme ISO27001: Sécurité des systèmes d'information">
         <span slot="desc">Formation certifiante dispensée par FIDENS & PECB</span></row-school>
@@ -165,7 +175,7 @@
         <span slot="desc">Collège et Lycée de Nangis (77)</span></row-school>
     </div>
 
-    <h2 class="teaching" style="margin-bottom:0px;">Enseignement</h2><hr class="teaching">
+    <h2 class="teaching" id="teaching" style="margin-bottom:0px;">Enseignement</h2><hr class="teaching">
     <div class="teaching container">
       <row-teaching year="2022" label="Formation « Développement RShiny en collaboration grâce à Git », dispensée au jour le jour à une équipe d'ENEDIS">
         <p slot='desc'>Rappels sur le développement web, formation à RShiny (reactivité, modules shiny, shinyjs). Rappels des bases de Git : gestion des branches, organisation d'une équipe, bonnes pratiques, soumissions et relecture de Pull Requests.</p></row-teaching>
@@ -175,7 +185,7 @@
         <p slot='desc'>Introduction au HTML, CSS, JavaScript et PHP, administration d'un nom de domaine et d'un hébergement sur OVH.</p></row-teaching>
     </div>
 
-    <h2 class="articles" style="margin-bottom:0px;">Articles</h2><hr class="articles">
+    <h2 id="articles" class="articles" style="margin-bottom:0px;">Articles</h2><hr class="articles">
     <div class="articles container">
 
       <row-article
@@ -221,7 +231,7 @@
       </row-article>
     </div>
 
-    <h2 class="benevolat" style="margin-bottom:0px;">Bénévolat</h2><hr class="benevolat">
+    <h2 id="benevolat" class="benevolat" style="margin-bottom:0px;">Bénévolat</h2><hr class="benevolat">
     <div class="container benevolat">
       <div class="staticrow">
         <div class="columnleft">2020</div>
@@ -245,7 +255,7 @@
       <center>
         <em>Code source : github.com/tintinmar1995/website-cv</em>
       </center>
-    </div>
+    </div><br/>
 
   </div>
 

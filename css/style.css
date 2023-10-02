@@ -51,6 +51,11 @@ p {
   flex: 0 0 85px;
 }
 
+.secondnav a {
+  color: #B0BEC5;
+  text-decoration: none;
+}
+
 .moving- {
   animation-name: tinUpIn;
   animation-duration: 4s;
