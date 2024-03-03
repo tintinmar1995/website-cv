@@ -45,7 +45,7 @@
         Imprimer</br><em style="font-size: x-small;">(sur une page)</em>
       </a>
       <!--<a id="show-settings"><i class="fas fa-cogs"></i></a>-->
-      <span id="update" style="font-size: 10pt; color:white;">Actualisé en Août 2023</span>
+      <span id="update" style="font-size: 10pt; color:white;">Actualisé en Mars 2024</span>
     </div>
 
     <!-- CONTENT -->
@@ -65,17 +65,15 @@
       <h1 id="name" style="margin-top: 5%; margin-bottom:0px;">Martin MASSON</h1>
       <h2 style="margin-top:0px;">Statisticien et ingénieur des données</h2>
 
-      <p id="contact">
+      <p id="contact" style="margin-top: 20px;">
         <a id="display-email" class="fa fa-envelope"></a>
         <a href="https://www.linkedin.com/in/martin-masson-data-scientist/" class="fa fa-linkedin"></a>
         <a href="https://github.com/tintinmar1995" class="fa fa-github"></a>
-        <!--<a href="https://gitlab.com/mmasson-datastorm" class="fa fa-gitlab"></a>-->
       </p>
       <div class='vertical-sep' style="margin:10px"></div>
 
       <div id="email-adress" style="display:none;">
         <p><b style="margin-right:10px">@</b><a aria-label="Compatible chiffrement ProtonMail" data-balloon-pos="up" style="text-decoration:none;" style="margin-right:10px">martin.masson.pro[at]protonmail.com</a></p>
-        <p><b style="margin-right:10px">@</b>martin.masson[at]datastorm.fr</p>
       </div>
       <SCRIPT>
         document.getElementById("display-email").onclick = function(){
@@ -83,7 +81,14 @@
           document.getElementById("email-adress").style.display = a=="none" ? "block" : "none";
         }
       </SCRIPT>
-      <div class='vertical-sep' style="margin:30px"></div>
+
+      <div class='vertical-sep' style="margin:25px"></div>
+
+      <p style="font-size:12pt; margin-top:15px; margin-bottom:30px;">
+        Statisticien de formation, mon expérience m'a permis d'acquérir une double casquette Data Scientist|Engineer,
+        ainsi que des compétences en gestion de projet.
+        En tant que consultant, je me suis spécialisé dans l'énergie au sein de plusieurs acteurs du groupe EDF.
+      </p>
 
       <h2 id="skills" style="margin-bottom:0px;">Compétences</h2><hr>
       <div id="skills-content" class="container">
@@ -104,7 +109,7 @@
         <skills-row topic="Développement">
           <span slot="list">Python, R • Java, C++, Go • Basic • Bash, Docker, Git, Linux</span></skills-row>
         <skills-row topic="- Backend&nbsp;">
-          <span slot="list">PHP, Python Flask, Python Starlette, R Plumber</span></skills-row>
+          <span slot="list">PHP, Python Flask, Python Starlette / FastAPI, R Plumber</span></skills-row>
         <skills-row topic="- Frontend">
           <span slot="list">HTML/CSS/JS • RShiny • ReactJS, VueJS • Android • Streamlit</span></skills-row>
       </div>
@@ -113,17 +118,17 @@
     <h2 id="xp" style="margin-bottom:0px;">Expérience <span id="xp-help" style="font-size:10pt;font-weight:normal;">(Plus d'info en cliquant sur <i class="fas fa-plus-square"></i>)</span></h2><hr>
 
       <xp-row
-        label="Consultant en Data Science | Chef de Projet | DSI, @ DATASTORM" hashtag="ds"
+        label="Consultant en Data Science | Manager Technique, @ DATASTORM" hashtag="ds"
         start="Depuis" end="Déc. 2019" logo="images/datastorm.png" logoWidth="80px"
         website="https://www.datastorm.fr"
       >
         <p slot="desc">DataStorm est l’entreprise de conseil du groupe GENES (écoles ENSAI-ENSAE, centre de recherche CREST). En s'appuyant sur des activités R&D, DataStorm propose une expertise statistique et Data.</p>
-        <li slot="skills">Traitement, management, analyse et anonymisation de données en R et Python. Conception de modèles de ML.</li>
-        <li slot="skills">Développement de packages et d'applications Web (R Shiny, Vuejs, Flask, Starlette).</li>
-        <li slot="skills">Mise en production et maintenance applicative (e.g. AWS & Azure). Dockerisation. Intégration en continue (DevOps), suivi des performances d'un modèle (MLOps).</li>
-        <li slot="skills">Énumération et priorisation des tâches. Encadrement de consultants. Suivi du reste à faire. Garant de la qualité du livrable et de la restitution.</li>
+        <li slot="skills">Traitement, management, anonymisation de données à des fins d'analyse ou de modélisation.</li>
+        <li slot="skills">Développement de packages et d'applications Web.</li>
+        <li slot="skills">Déploiement (AWS, Azure, OVH) et maintenance. Dockerisation. Intégration en continue, suivi des performances d'un modèle.</li>
+        <li slot="skills">Gestion de projet : Cadrage et priorisation. Encadrement de consultants. Garant de la qualité du livrable et de la restitution.</li>
         <li slot="skills">Administration système, gestion du parc informatique, support technique.</li>
-        <span slot="kw">Statistique</span><span slot="kw">Machine Learning</span><span slot="kw">R</span><span slot="kw">RShiny</span><span slot="kw">Python</span>
+        <span slot="kw">Statistique</span><span slot="kw">Machine Learning</span><span slot="kw">R</span><span slot="kw">Python</span><span slot="kw">Gestion de projet</span><span slot="kw">Management</span>
       </xp-row>
 
       <xp-row
@@ -177,10 +182,12 @@
 
     <h2 class="teaching" id="teaching" style="margin-bottom:0px;">Enseignement</h2><hr class="teaching">
     <div class="teaching container">
-      <row-teaching year="2022" label="Formation « Développement RShiny en collaboration grâce à Git », dispensée au jour le jour à une équipe d'ENEDIS">
+      <row-teaching year="2024" label="Formation « Data Science appliquée à la Cybersécurité », dispensée en une série d'ateliers (5x2h)">
+        <p slot='desc'>Introduction à la Data Science : accès à la donnée, son traitement, son analyse. Démystification de l'intelligence artificielle. </p></row-teaching>
+      <row-teaching year="2022-2023" label="Formation « Développement RShiny en collaboration grâce à Git », dispensée au jour le jour à une équipe d'ENEDIS">
         <p slot='desc'>Rappels sur le développement web, formation à RShiny (reactivité, modules shiny, shinyjs). Rappels des bases de Git : gestion des branches, organisation d'une équipe, bonnes pratiques, soumissions et relecture de Pull Requests.</p></row-teaching>
       <row-teaching year="2021" label="Formation « Développement en collaboration grâce à Git », dispensée aux consultants de DATASTORM (7h)">
-        <p slot='desc'>Configuration de Git, réécriture d'historique, organisation d'une équipe autour de Git, bonnes pratiques, soumissions et relecture de Merge/Pull Requests.</p></row-teaching>
+        <p slot='desc'>Configuration de Git, réécriture d'historique, organisation d'une équipe autour de Git, bonnes pratiques, soumissions et relecture de Merge/Pull Requests, tests fonctionnelles, intégration en continue.</p></row-teaching>
       <row-teaching year="2017" label="Formation « Base du développement web », dispensée aux candidats à la DSI d'ENSAI junior Consultant (6h)">
         <p slot='desc'>Introduction au HTML, CSS, JavaScript et PHP, administration d'un nom de domaine et d'un hébergement sur OVH.</p></row-teaching>
     </div>
