@@ -73,6 +73,7 @@ class XPRow extends HTMLElement {
           text-align: right;
           padding-right: 5px;
           flex: 0 0 85px;
+          color: #6e65c7;
         }
 
         .columnright {
@@ -92,7 +93,7 @@ class XPRow extends HTMLElement {
         </div>
         <div class="columnright">
             <p>
-              <b id='title'></b>
+              <b id='title'></b> <em style='color:#6e65c7;'>@</em> <em id="company" style="color:#6e65c7;"></em>
               <a id="website"><i class="fa fa-external-link" style="margin-left: 7px; font-size: 11px; color: teal"></i></a>
             </p>
             <slot name="desc"></slot>
@@ -124,6 +125,11 @@ class XPRow extends HTMLElement {
     let label = this.getAttribute('label') || '';
     if(label){
       shadow.querySelector('#title').innerText = label + ',';
+    }
+
+    let company = this.getAttribute('company') || '';
+    if(company){
+      shadow.querySelector('#company').innerText = company;
     }
 
     let start = this.getAttribute('start') || '';

@@ -49,10 +49,11 @@ p {
   text-align: right;
   padding-right: 5px;
   flex: 0 0 85px;
+  color: #6e65c7;
 }
 
 .secondnav a {
-  color: #B0BEC5;
+  color: #677ce760; /*#B0BEC5;*/
   text-decoration: none;
 }
 

@@ -14,6 +14,7 @@ class SkillsRow extends HTMLElement {
           text-align: right;
           padding-right: 5px;
           flex: 0 0 140px;
+          color: #6e65c7;
         }
         .columnrightnoborder {
           padding-left: 5px;

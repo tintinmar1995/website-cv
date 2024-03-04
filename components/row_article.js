@@ -18,6 +18,7 @@ class Article extends HTMLElement {
           text-align: right;
           padding-right: 5px;
           flex: 0 0 85px;
+          color: #6e65c7;
         }
         .columnrightnoborder {
           padding-left: 5px;
@@ -31,7 +32,7 @@ class Article extends HTMLElement {
         <div class="columnrightnoborder">
           <b id='label'></b>
           <p>
-            <slot name='desc'>Desc...</slot> <a id="link"></a>
+            <slot name='desc'>Desc...</slot> <a id="link" style="color: #6e65c7;"></a>
           </p>
         </div>
       </div>
