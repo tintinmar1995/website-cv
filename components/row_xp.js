@@ -62,8 +62,10 @@ class XPRow extends HTMLElement {
           padding:3px;
           margin-right:6px;
           font:bold 13px Arial;
-          background:#f5f5f5;
-          color:#555;
+          background: #677ce720;
+          /*background:#f5f5f5;*/
+          /*color:#555;*/
+          color: #6e65c7;
           border-radius:5px;
           width:100px;
           border:1px solid #ccc;
