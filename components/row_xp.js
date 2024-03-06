@@ -68,7 +68,7 @@ class XPRow extends HTMLElement {
           color: #6e65c7;
           border-radius:5px;
           width:100px;
-          border:1px solid #ccc;
+          border:1px solid #677ce720;
         }
 
         .columnleft {
