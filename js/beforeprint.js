@@ -36,6 +36,14 @@ function keepIthTag(tagname, i){
   }
 }
 
+function ensurePhotoShown() {
+  document.getElementById("photo").style.display = "block";
+}
+
+function ensurePhotoHidden() {
+  document.getElementById("photo").style.display = "none";
+}
+
 function shortPrintable(){
   longPrintable()
   //for (elem of document.querySelectorAll('[slot=skills]')){
@@ -52,7 +60,7 @@ function shortPrintable(){
     elem.hideJobs();
   }
   
-  document.getElementById("photo").style.display = "none";
+  ensurePhotoHidden();
 
   keepIthTag("xp-row", [0]);
   keepIthTag("row-school", 1);
