@@ -47,9 +47,16 @@ function shortPrintable(){
   for (elem of document.getElementsByClassName("articles")) {
     elem.style.display = "none";
   }
+
+  for (elem of document.getElementsByTagName("xp-row")) {
+    elem.hideJobs();
+  }
+  
+  document.getElementById("photo").style.display = "none";
+
   keepIthTag("xp-row", [0]);
   keepIthTag("row-school", 1);
-  keepIthTag("row-teaching", [0,1,2]);
+  keepIthTag("row-teaching", [0,2]);
 }
 
 /*for (elem of document.getElementsByTagName("row-school")) {

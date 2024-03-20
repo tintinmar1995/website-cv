@@ -100,6 +100,10 @@ class XPRow extends HTMLElement {
             </p>
             <slot name="desc"></slot>
             <ul class="xp-skills"><slot name="skills"></slot></ul>
+            <div id="jobs-container" style="display:none;">
+              <p>Des exemples de missions :</p>
+              <ul class="xp-skills"><slot name="jobs"></slot></ul>
+            </div>
             <center>
               <a class="modal-btn" id="modal-btn" data-balloon-pos="up"
                  aria-label="Plus sur cette expérience"
@@ -166,10 +170,19 @@ class XPRow extends HTMLElement {
       shadow.querySelector('#logo').style.width = logo_wth;
     }
 
+    let showJobs = this.getAttribute('showJobs') || '';
+    if(showJobs){
+      shadow.querySelector('#jobs-container').style.display = 'block';
+    }
+
   }
 
   showLogo(){
     this.shadowRoot.querySelector('#logo').style.display = 'block';
+  }
+
+  hideJobs(){
+    this.shadowRoot.querySelector('#jobs-container').style.display = 'none';    
   }
 
   hideLogo(){
