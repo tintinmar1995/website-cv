@@ -101,7 +101,7 @@ class XPRow extends HTMLElement {
             <slot name="desc"></slot>
             <ul class="xp-skills"><slot name="skills"></slot></ul>
             <div id="jobs-container" style="display:none;">
-              <p>Des exemples de missions :</p>
+              <p>Parmi mes missions :</p>
               <ul class="xp-skills"><slot name="jobs"></slot></ul>
             </div>
             <center>

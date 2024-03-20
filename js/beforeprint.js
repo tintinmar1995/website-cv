@@ -44,27 +44,48 @@ function ensurePhotoHidden() {
   document.getElementById("photo").style.display = "none";
 }
 
+function ensureBenevolatHidden() {
+  for (elem of document.getElementsByClassName("benevolat")) {
+    elem.style.display = "none";
+  }
+}
+
+function ensureArticlesHidden() {
+  for (elem of document.getElementsByClassName("articles")) {
+    elem.style.display = "none";
+  }
+}
+
+
 function shortPrintable(){
   longPrintable()
   //for (elem of document.querySelectorAll('[slot=skills]')){
   //  elem.style.display = "none";
   //}
-  for (elem of document.getElementsByClassName("benevolat")) {
-    elem.style.display = "none";
-  }
-  for (elem of document.getElementsByClassName("articles")) {
-    elem.style.display = "none";
-  }
+  ensureBenevolatHidden();
+  ensureArticlesHidden();
+  ensurePhotoHidden();
 
   for (elem of document.getElementsByTagName("xp-row")) {
     elem.hideJobs();
   }
-  
-  ensurePhotoHidden();
 
   keepIthTag("xp-row", [0]);
   keepIthTag("row-school", 1);
   keepIthTag("row-teaching", [0,2]);
+}
+
+// Ctrl + C
+// customPrint202404();window.print()
+function customPrint202404(){
+  longPrintable();
+  ensureBenevolatHidden();
+  ensureArticlesHidden();
+  ensurePhotoShown();
+  document.getElementById("photo").children[0].width = 75;
+  keepIthTag("xp-row", [0,1,2]);
+  keepIthTag("row-school", 1);
+  keepIthTag("row-teaching", [0,1,2,3]);
 }
 
 /*for (elem of document.getElementsByTagName("row-school")) {
